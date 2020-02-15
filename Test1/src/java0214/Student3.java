@@ -49,11 +49,11 @@ public class Student3 {
     }
 
     //静态代码块
-    static{
-        id = "100000";
-        name = "张三";
-        score = 5.0;
-    }
+//    static{
+//        id = "100000";
+//        name = "张三";
+//        score = 5.0;
+//    }
 
     //构造块
     {
