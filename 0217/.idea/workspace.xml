@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="549ed717-759a-4c09-81eb-5c02fe3b51de" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/searchInsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0215/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0215/out/production/0215/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0215/out/production/0215/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0215/src/SeqList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0216/0216.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0218/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0218/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0218/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../0218/0218.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +18,11 @@
     <session id="-1393232256">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.591" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+              <caret line="8" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -188,17 +184,17 @@
       <updated>1581940322282</updated>
       <workItem from="1581940913989" duration="1624000" />
       <workItem from="1581944759523" duration="120000" />
+      <workItem from="1582003849135" duration="32000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1744000" />
+    <option name="totallyTimeSpent" value="1776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="975" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340015" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25697923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="设计器" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -247,7 +243,7 @@
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <caret line="8" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
