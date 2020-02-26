@@ -22,7 +22,7 @@ public class thirdMax {
         int secondMax = nums[1];
         int thirdMax = nums[2];
         if(nums.length > 3){
-            for (int i = 3; i < nums.length; i++) {
+            for (int i = 3; i <= nums.length; i++) {
                 if (firstMax == secondMax) {
                     firstMax = secondMax;
                     secondMax = thirdMax;
