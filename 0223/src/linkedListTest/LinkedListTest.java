@@ -10,121 +10,121 @@ public class LinkedListTest {
         }
     }
 
-    public ListNode ListNode(ListNode head,int val){
-        //判空
-        if(head == null){
-            return null;
-        }
-        //先删除中间节点 prev 始终指向 cur 前一个位置
-        ListNode prev = head;
-        ListNode cur = head.next;
-        while(cur != null){
-            if(cur.val == val){
-                prev.next = cur.next;
-                cur = prev.next;
-            }else{
-                prev = cur;
-                cur = cur.next;
-            }
-        }
-        //最后考虑删除头节点
-        if(head.val ==val){
-            head = head.next;
-        }
-        return head;
-    }
-
-    public ListNode reverseList(ListNode head){
-        //判空
-        if (head ==null){
-            return null;
-        }
-        //当只有一个节点时
-        if(head.next == null){
-            return head;
-        }
-        ListNode cur = head;
-        ListNode prev = null;
-        ListNode newHead = null;
-        while(cur != null){
-            ListNode next = cur.next;
-            if(next == null){
-                newHead = cur;
-            }
-            //逆置操作
-            cur.next = prev;
-            //更新指向位置
-            prev = cur;
-            cur = next;
-        }
-        return newHead;
-    }
-
-    public int size(ListNode head){
-        int size = 0;
-        ListNode cur = head;
-        while(cur != null){
-            size++;
-            cur = cur.next;
-        }
-        return size;
-    }
-
-    public ListNode FindKthToTail(ListNode head, int k){
-        if(head == null){
-            return null;
-        }
-        int size = size(head);
-        if(k <= 0 || k > size){
-            return null;
-        }
-        int steps = size - k;
-        ListNode cur = head;
-        for(int i = 0; i < steps; i++){
-            cur = cur.next;
-        }
-        return cur;
-    }
-
-    public ListNode middleNode(ListNode head){
-        int steps = size(head) / 2;
-        ListNode cur = head;
-        for(int i = 0; i < steps; i++){
-            cur = cur.next;
-        }
-        return cur;
-    }
-
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
-        if (l1 == null){
-            return l2;
-        }
-        if(l2 == null){
-            return l1;
-        }
-        ListNode newHead = new ListNode(-1);
-        ListNode newTail = newHead;
-        ListNode cur1 = l1;
-        ListNode cur2 = l2;
-        while(cur1 != cur2 && cur2 != null){
-            if(cur1.val < cur2.val){
-                newTail.next = cur1;
-                newTail = newTail.next;
-                cur1 = cur1.next;
-            }else{
-                newTail.next = cur2;
-                newTail = newTail.next;
-                cur2 = cur2.next;
-            }
-            //循环结束
-            if(cur1 == null){
-                newTail.next = cur2;
-            }else{
-                newTail.next = cur1;
-            }
-        }
-        return newHead.next;
-    }
+//    public ListNode ListNode(ListNode head,int val){
+//        //判空
+//        if(head == null){
+//            return null;
+//        }
+//        //先删除中间节点 prev 始终指向 cur 前一个位置
+//        ListNode prev = head;
+//        ListNode cur = head.next;
+//        while(cur != null){
+//            if(cur.val == val){
+//                prev.next = cur.next;
+//                cur = prev.next;
+//            }else{
+//                prev = cur;
+//                cur = cur.next;
+//            }
+//        }
+//        //最后考虑删除头节点
+//        if(head.val ==val){
+//            head = head.next;
+//        }
+//        return head;
+//    }
+//
+//    public ListNode reverseList(ListNode head){
+//        //判空
+//        if (head ==null){
+//            return null;
+//        }
+//        //当只有一个节点时
+//        if(head.next == null){
+//            return head;
+//        }
+//        ListNode cur = head;
+//        ListNode prev = null;
+//        ListNode newHead = null;
+//        while(cur != null){
+//            ListNode next = cur.next;
+//            if(next == null){
+//                newHead = cur;
+//            }
+//            //逆置操作
+//            cur.next = prev;
+//            //更新指向位置
+//            prev = cur;
+//            cur = next;
+//        }
+//        return newHead;
+//    }
+//
+//    public int size(ListNode head){
+//        int size = 0;
+//        ListNode cur = head;
+//        while(cur != null){
+//            size++;
+//            cur = cur.next;
+//        }
+//        return size;
+//    }
+//
+//    public ListNode FindKthToTail(ListNode head, int k){
+//        if(head == null){
+//            return null;
+//        }
+//        int size = size(head);
+//        if(k <= 0 || k > size){
+//            return null;
+//        }
+//        int steps = size - k;
+//        ListNode cur = head;
+//        for(int i = 0; i < steps; i++){
+//            cur = cur.next;
+//        }
+//        return cur;
+//    }
+//
+//    public ListNode middleNode(ListNode head){
+//        int steps = size(head) / 2;
+//        ListNode cur = head;
+//        for(int i = 0; i < steps; i++){
+//            cur = cur.next;
+//        }
+//        return cur;
+//    }
+//
+//    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+//        if (l1 == null){
+//            return l2;
+//        }
+//        if(l2 == null){
+//            return l1;
+//        }
+//        ListNode newHead = new ListNode(-1);
+//        ListNode newTail = newHead;
+//        ListNode cur1 = l1;
+//        ListNode cur2 = l2;
+//        while(cur1 != cur2 && cur2 != null){
+//            if(cur1.val < cur2.val){
+//                newTail.next = cur1;
+//                newTail = newTail.next;
+//                cur1 = cur1.next;
+//            }else{
+//                newTail.next = cur2;
+//                newTail = newTail.next;
+//                cur2 = cur2.next;
+//            }
+//            //循环结束
+//            if(cur1 == null){
+//                newTail.next = cur2;
+//            }else{
+//                newTail.next = cur1;
+//            }
+//        }
+//        return newHead.next;
+//    }
 
     public ListNode partition(ListNode pHead, int x){
         if(pHead == null){
@@ -134,8 +134,8 @@ public class LinkedListTest {
             return pHead;
         }
         ListNode bigHead = new ListNode(-1);
-        ListNode smallHead = new ListNode(-1);
         ListNode bigTail = bigHead;
+        ListNode smallHead = new ListNode(-1);
         ListNode smallTail = smallHead;
 
         for(ListNode cur = pHead; cur != null; cur = cur.next){
@@ -160,12 +160,13 @@ public class LinkedListTest {
         a.next = b;
         b.next = c;
         c.next = d;
+        d.next = e;
         e.next = null;
 
         int x = 4;
         LinkedListTest test = new LinkedListTest();
         ListNode res = test.partition(a, x);
-        for (ListNode cur = res; res != null; res = res.next) {
+        for (ListNode cur = res; cur != null; cur = cur.next) {
             System.out.println(cur.val);
         }
     }
