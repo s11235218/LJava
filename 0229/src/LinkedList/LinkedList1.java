@@ -10,32 +10,26 @@ public class LinkedList1 {
         }
     }
 
-    public ListNode reverseElement(ListNode head, int val){
-        if(head == null){
-            return null;
-        }
-
-        ListNode prev = head;
-        ListNode cur = head.next;
-        while(cur != null){
-            if(cur.val == val){
-                prev.next = cur.next;
-                cur = prev.next;
+    public ListNode deleteDuplication(ListNode pHead){
+        ListNode newHead = new ListNode(-1);
+        ListNode newTail = newHead;
+        for(ListNode cur = pHead; cur != null; cur = cur.next){
+            if (cur.next != null && cur.val == cur.next.val){
+                while(cur.next != null && cur.val == cur.next.val){
+                    cur = cur.next;
+                }
             }else{
-                prev = cur;
-                cur = cur.next;
+                newTail.next = new ListNode(cur.val);
+                newTail = newTail.next;
             }
         }
-        if(head.val == val){
-            head = head.next;
-        }
-        return head;
+        return newHead.next;
     }
 
     public boolean hasCycle(ListNode head){
         ListNode fast = head;
         ListNode slow = head;
-        while(fast != null && fast.next !=null){
+        while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
             if(slow == fast){

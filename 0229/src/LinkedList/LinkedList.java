@@ -36,7 +36,7 @@ public class LinkedList {
 
     public ListNode reverseList(ListNode head){
         //判空
-        if (head ==null){
+        if (head == null){
             return null;
         }
         //当只有一个节点时
@@ -151,7 +151,7 @@ public class LinkedList {
         return smallHead.next;
     }
 
-    public static void main(String[] args){
+    public ListNode newList(){
         ListNode a = new ListNode(9);
         ListNode b = new ListNode(5);
         ListNode c = new ListNode(2);
@@ -163,11 +163,25 @@ public class LinkedList {
         d.next = e;
         e.next = null;
 
+        return a;
+    }
+
+    public void partitionTest(){
         int x = 4;
-        LinkedList test = new LinkedList();
-        ListNode res = test.partition(a, x);
+        ListNode res = partition(newList(), x);
         for (ListNode cur = res; cur != null; cur = cur.next) {
             System.out.println(cur.val);
         }
+    }
+
+    public void chkPalindromeTest(){
+        LinkedList2 test2 = new LinkedList2();
+        System.out.println(test2.chkPalindrome(test2.newList()));
+    }
+
+    public static void main(String[] args){
+        LinkedList test = new LinkedList();
+        //test.partitionTest();
+        test.chkPalindromeTest();
     }
 }
