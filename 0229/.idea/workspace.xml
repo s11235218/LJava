@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc29b75b-b825-4e71-8f5f-164a6931f28e" name="默认" comment="" />
+    <list default="true" id="cc29b75b-b825-4e71-8f5f-164a6931f28e" name="默认" comment="">
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/LinkedList0304.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedList0304.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +16,12 @@
     <session id="711756734">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="6" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -32,13 +36,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2345" />
+          <entry key="java" value="3190" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2345" />
+          <entry key="JAVA" value="3190" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -58,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2124">
-              <caret line="10" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="36">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="e#148#149#0" expanded="true" />
                 <element signature="e#186#187#0" expanded="true" />
@@ -71,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList0304.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="-108">
+              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
                 <element signature="e#152#153#0" expanded="true" />
                 <element signature="e#190#191#0" expanded="true" />
@@ -97,9 +101,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/LinkedList/LinkedList1.java" />
-        <option value="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/LinkedList/LinkedList2.java" />
         <option value="$PROJECT_DIR$/src/LinkedList/LinkedList0304.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
       </list>
     </option>
   </component>
@@ -109,9 +113,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="477" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="343" />
+    <option name="y" value="90" />
     <option name="width" value="1497" />
     <option name="height" value="1302" />
   </component>
@@ -206,6 +210,7 @@
       <workItem from="1583244589789" duration="89000" />
       <workItem from="1583302432277" duration="11483000" />
       <workItem from="1583416430642" duration="21000" />
+      <workItem from="1583490898222" duration="2986000" />
     </task>
     <task id="LOCAL-00001" summary="practice">
       <created>1583153283308</created>
@@ -218,10 +223,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17721000" />
+    <option name="totallyTimeSpent" value="20707000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="975" extended-state="7" />
+    <frame x="229" y="60" width="998" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.12240516" />
@@ -286,8 +291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList0304.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="-108">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding>
             <element signature="e#152#153#0" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
@@ -297,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2124">
-          <caret line="10" column="5" selection-start-line="3" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="36">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#148#149#0" expanded="true" />
             <element signature="e#186#187#0" expanded="true" />

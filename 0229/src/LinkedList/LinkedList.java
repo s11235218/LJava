@@ -10,7 +10,7 @@ public class LinkedList {
         }
     }
 
-    public ListNode ListNode(ListNode head,int val){
+    public ListNode ListNode(ListNode head, int val){
         //判空
         if(head == null){
             return null;
