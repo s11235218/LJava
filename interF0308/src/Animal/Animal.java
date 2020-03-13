@@ -13,7 +13,8 @@ public class Animal implements Cloneable{
 
     @Override
     public Animal clone() throws CloneNotSupportedException {
-        //Object.clone 就在深拷贝
+        // Object.clone 就在深拷贝
+
         return (Animal)super.clone();
     }
 }
