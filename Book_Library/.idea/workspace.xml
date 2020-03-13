@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c050d7aa-24ca-42e4-8bb4-b59c2339a5df" name="默认" comment="" />
+    <list default="true" id="c050d7aa-24ca-42e4-8bb4-b59c2339a5df" name="默认" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interF0308/src/Animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interF0308/src/Animal/Animal.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,10 +35,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="b&#9;FILE&#9;file://E:/git/LJava/Book_Library/src/Library/book/Book.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583674598338" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interF0308" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -74,6 +80,8 @@
       <workItem from="1583666283898" duration="9184000" />
       <workItem from="1583726565004" duration="223000" />
       <workItem from="1584096695380" duration="8000" />
+      <workItem from="1584097811051" duration="811000" />
+      <workItem from="1584104851098" duration="610000" />
     </task>
     <servers />
   </component>
@@ -81,10 +89,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584096696934">
+    <state x="501" y="235" key="FileChooserDialogImpl" timestamp="1584098343509">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584096696934" />
+    <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1584098343509" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584097819910">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584097819910" />
   </component>
   <component name="masterDetails">
     <states>
