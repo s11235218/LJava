@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c050d7aa-24ca-42e4-8bb4-b59c2339a5df" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../interF0308/src/Animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interF0308/src/Animal/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/action/AddAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/action/AddAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +81,8 @@
       <workItem from="1584096695380" duration="8000" />
       <workItem from="1584097811051" duration="811000" />
       <workItem from="1584104851098" duration="610000" />
+      <workItem from="1584160996689" duration="3046000" />
+      <workItem from="1584193960787" duration="32000" />
     </task>
     <servers />
   </component>
@@ -93,10 +94,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1584098343509" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584097819910">
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584193962224">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584097819910" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584193962224" />
   </component>
   <component name="masterDetails">
     <states>
