@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7484d178-f1ea-4ea3-981c-483f06742b45" name="默认" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Animal/BadCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Animal/Bird.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Animal/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/IShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Bat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Bird.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Fish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Frog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/IAmphibian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/IFlying.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/IRunning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/ISwimming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Insect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractLearn/animal/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shape/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shape/Flower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shape/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shape/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shape/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Book_Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Book_Library/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animal/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +49,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Z4VRcpy0bAZitCUWmg0CyfZwq2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,7 +65,64 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="abstractLearn.animal" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test (3)">
+    <configuration name="BadCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Animal.BadCode" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Animal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shape.Test" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="abstractLearn.Test" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="abstractLearn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="abstractLearn.animal.Test" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="abstractLearn.animal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Animal.Test" />
       <module name="interF0308" />
@@ -53,7 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (3)" />
+        <item itemvalue="Application.Test (2)" />
+        <item itemvalue="Application.BadCode" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -71,6 +160,7 @@
       <workItem from="1583726564697" duration="37000" />
       <workItem from="1584098347335" duration="276000" />
       <workItem from="1584104850883" duration="1484000" />
+      <workItem from="1584417008073" duration="15872000" />
     </task>
     <servers />
   </component>
@@ -78,10 +168,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser" timestamp="1584455561315">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser/0.0.1440.960@0.0.1440.960" timestamp="1584455561315" />
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom" timestamp="1584455696030">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom/0.0.1440.960@0.0.1440.960" timestamp="1584455696030" />
+    <state width="1396" height="255" key="GridCell.Tab.0.center" timestamp="1584455696029">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state width="1396" height="255" key="GridCell.Tab.0.center/0.0.1440.960@0.0.1440.960" timestamp="1584455696029" />
+    <state width="1396" height="255" key="GridCell.Tab.0.left" timestamp="1584455696029">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state width="1396" height="255" key="GridCell.Tab.0.left/0.0.1440.960@0.0.1440.960" timestamp="1584455696029" />
+    <state width="1396" height="255" key="GridCell.Tab.0.right" timestamp="1584455696030">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1584455696030" />
     <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584104860910">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584104860910" />
+    <state x="383" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1584444977387">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="383" y="205" width="672" height="678" key="search.everywhere.popup/0.0.1440.960@0.0.1440.960" timestamp="1584444977387" />
   </component>
   <component name="masterDetails">
     <states>

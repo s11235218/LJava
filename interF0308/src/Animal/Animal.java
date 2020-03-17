@@ -8,6 +8,7 @@ public class Animal implements Cloneable{
     }
 
     public void eat(String food){
+        System.out.println("Animal.eat");
         System.out.println(this.name + "正在吃" + food);
     }
 
