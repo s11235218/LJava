@@ -2,15 +2,12 @@ package Animal;
 
 public class Test {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Animal animal = new Bird("小黑");
-        animal.eat("谷子");
-
-
-
-//        //Animal animal1 = animal;
-//        Animal animal1 = animal.clone();
-//        //是否引用同一个对象
-//        System.out.println(animal == animal1);
+        Animal animal = new Animal("haha");
+//        //浅拷贝
+//        Animal animal1 = animal;
+        Animal animal1 = animal.clone();
+        //是否引用同一个对象
+        System.out.println(animal == animal1);
     }
 
     public static void Test1(){
