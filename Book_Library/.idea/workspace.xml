@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c050d7aa-24ca-42e4-8bb4-b59c2339a5df" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/action/FindAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/action/FindAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +90,7 @@
       <workItem from="1584455914587" duration="16000" />
       <workItem from="1584524560076" duration="1030000" />
       <workItem from="1584622959166" duration="318000" />
+      <workItem from="1584711053766" duration="87000" />
     </task>
     <servers />
   </component>
@@ -118,10 +118,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state width="1396" height="302" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1584281270566" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584711055062">
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584801402429">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584711055062" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584801402429" />
   </component>
   <component name="masterDetails">
     <states>
