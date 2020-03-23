@@ -93,6 +93,8 @@
       <workItem from="1584711053766" duration="87000" />
       <workItem from="1584801401984" duration="48000" />
       <workItem from="1584884382078" duration="6000" />
+      <workItem from="1584967138669" duration="608000" />
+      <workItem from="1584970693972" duration="179000" />
     </task>
     <servers />
   </component>
@@ -120,10 +122,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state width="1396" height="302" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1584281270566" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584884382996">
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1584970804052">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584884382996" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1584970804052" />
   </component>
   <component name="masterDetails">
     <states>
