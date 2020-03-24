@@ -5,7 +5,7 @@ import Library.book.BookList;
 
 abstract public class User {
     protected String name;
-    protected IAction[] actions;
+    protected IAction[] actions = null;
 
     // 打印命令行菜单
     abstract public int menu();

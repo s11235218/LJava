@@ -16,7 +16,7 @@ public class Main {
         // 3. 进入主循环
         while(true){
             // 4. 循环内部调用 menu 方法
-                int choice = user.menu();
+            int choice = user.menu();
             //5. 根据用户输入 choice 决定执行哪个 IAction 完成操作
             user.doAction(choice, bookList);
         }
