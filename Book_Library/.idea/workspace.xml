@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c050d7aa-24ca-42e4-8bb4-b59c2339a5df" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/../interF0308/src/DClone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/action/AddAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/action/AddAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/action/DelAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/action/DelAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interF0308/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +39,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583674598338" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interF0308" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -102,6 +97,8 @@
       <workItem from="1584967138669" duration="608000" />
       <workItem from="1584970693972" duration="179000" />
       <workItem from="1585022893571" duration="9401000" />
+      <workItem from="1585062691214" duration="123000" />
+      <workItem from="1585123202236" duration="24000" />
     </task>
     <servers />
   </component>
@@ -113,10 +110,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="526" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1440.960@0.0.1440.960" timestamp="1585055936499" />
-    <state x="501" y="235" key="FileChooserDialogImpl" timestamp="1585049792757">
+    <state x="501" y="235" key="FileChooserDialogImpl" timestamp="1585123216447">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1585049792757" />
+    <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1585123216447" />
     <state width="1396" height="302" key="GridCell.Tab.0.bottom" timestamp="1585061224852">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
@@ -133,10 +130,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state width="1396" height="302" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585061224852" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585022907155">
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585123203265">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585022907155" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585123203265" />
   </component>
   <component name="masterDetails">
     <states>
