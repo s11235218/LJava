@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7484d178-f1ea-4ea3-981c-483f06742b45" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/../Book_Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Book_Library/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LString/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LString/StringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LString/StringTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +135,7 @@
       <workItem from="1585061260040" duration="1290000" />
       <workItem from="1585062580963" duration="232000" />
       <workItem from="1585123223426" duration="7063000" />
+      <workItem from="1585225140048" duration="2779000" />
     </task>
     <servers />
   </component>
@@ -171,10 +171,14 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585141571236" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585062581664">
+    <state x="313" y="214" key="Vcs.Push.Dialog.v2" timestamp="1585231964568">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585062581664" />
+    <state x="313" y="214" key="Vcs.Push.Dialog.v2/0.0.1440.960@0.0.1440.960" timestamp="1585231964568" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585225174550">
+      <screen x="0" y="0" width="1440" height="960" />
+    </state>
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585225174550" />
     <state x="383" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1584444977387">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
