@@ -116,6 +116,20 @@ public class StringTest {
         // 实现 判断某个字符是否全部由数字构成 123-true
         System.out.println(isNumber("1234"));
         System.out.println(isNumber("123a"));
+
+        // 字符串转字节数组
+        // 网络传输/存储一般使用字节数组
+        // 文本处理一般使用字符数组
+        String str2 = "hello";
+        byte[] array = str.getBytes();
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+
+        String str3 = new String(array);
+        System.out.println(str3);
     }
 
     // 实现 判断某个字符是否全部由数字构成 123-true

@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7484d178-f1ea-4ea3-981c-483f06742b45" name="默认" comment="多态、抽象类、String类">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LString/StringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LString/StringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LString/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LString/STest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="interF0308" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583672321666" />
@@ -43,7 +50,7 @@
       <recent name="abstractLearn.animal" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StringTest">
+  <component name="RunManager" selected="Application.STest">
     <configuration name="DClone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DClone" />
       <module name="interF0308" />
@@ -51,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LString.StringTest" />
+    <configuration name="STest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LString.STest" />
       <module name="interF0308" />
       <extension name="coverage">
         <pattern>
@@ -64,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="abstractLearn.animal.Test" />
+    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LString.StringTest" />
       <module name="interF0308" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="abstractLearn.animal.*" />
+          <option name="PATTERN" value="LString.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.STest" />
         <item itemvalue="Application.StringTest" />
         <item itemvalue="Application.DClone" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Test (4)" />
-        <item itemvalue="Application.Test (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -135,6 +142,7 @@
       <workItem from="1585062580963" duration="232000" />
       <workItem from="1585123223426" duration="7063000" />
       <workItem from="1585225140048" duration="3675000" />
+      <workItem from="1585281649073" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="多态、、抽象类、String类">
       <created>1585232082693</created>
@@ -182,30 +190,30 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1585062687128" />
-    <state width="1396" height="255" key="GridCell.Tab.0.bottom" timestamp="1585141571236">
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom" timestamp="1585283524650">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.bottom/0.0.1440.960@0.0.1440.960" timestamp="1585141571236" />
-    <state width="1396" height="255" key="GridCell.Tab.0.center" timestamp="1585141571235">
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom/0.0.1440.960@0.0.1440.960" timestamp="1585283524650" />
+    <state width="1396" height="255" key="GridCell.Tab.0.center" timestamp="1585283524650">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.center/0.0.1440.960@0.0.1440.960" timestamp="1585141571235" />
-    <state width="1396" height="255" key="GridCell.Tab.0.left" timestamp="1585141571235">
+    <state width="1396" height="255" key="GridCell.Tab.0.center/0.0.1440.960@0.0.1440.960" timestamp="1585283524650" />
+    <state width="1396" height="255" key="GridCell.Tab.0.left" timestamp="1585283524650">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.left/0.0.1440.960@0.0.1440.960" timestamp="1585141571235" />
-    <state width="1396" height="255" key="GridCell.Tab.0.right" timestamp="1585141571236">
+    <state width="1396" height="255" key="GridCell.Tab.0.left/0.0.1440.960@0.0.1440.960" timestamp="1585283524650" />
+    <state width="1396" height="255" key="GridCell.Tab.0.right" timestamp="1585283524650">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585141571236" />
+    <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585283524650" />
     <state x="313" y="214" key="Vcs.Push.Dialog.v2" timestamp="1585232262485">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="313" y="214" key="Vcs.Push.Dialog.v2/0.0.1440.960@0.0.1440.960" timestamp="1585232262485" />
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585225174550">
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1585281862232">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585225174550" />
+    <state x="405" y="304" key="com.intellij.ide.util.TipDialog/0.0.1440.960@0.0.1440.960" timestamp="1585281862232" />
     <state x="383" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1584444977387">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
