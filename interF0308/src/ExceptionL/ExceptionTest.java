@@ -1,21 +1,37 @@
+package ExceptionL;
+
 import java.util.Scanner;
 
 public class ExceptionTest {
+    // 异常处理流程
+    // 1. 程序先执行 try 中的代码
+    // 2. 如果 try 中代码出现异常，结束 try中其他代码。检查当前异常和 catch 中声明的异常类型是否匹配
+    // 3. 如果找到匹配的异常类型，这个异常就被当前 catch 捕获，就执行 catch 中代码
+    // 4. 如果没找到匹配的异常类型，这个异常就会沿着调用栈，传递给方法的调用者
+    // 5. 无论是否找到匹配的类型 catch 语句，finally 都一定在方法结束前被执行
+    // 6. 如果上层调用者没有合适 catch 代码，异常还是要继续传递给调用者
+    // 7. 如果一直向上传到 main 方法，都没有合适 catch 语句，最终交给 JVM
     public static void main(String[] args) {
-        //System.out.println(10 / 0);
-//        int[] arr = {1, 2, 3, 4 ,5};
-//        System.out.println(arr[100]);
+        System.out.println(10 / 0);
+        int[] arr = {1, 2, 3, 4 ,5};
+        System.out.println(arr[100]);
+
         // 异常是程序运行时出现错误之后的通知机制
         // 如果程序正常结束，进程退出码是 0
         // 如果是出现异常结束，此时退出码非 0
-//        try{
-//            func1();
-//        }catch(NullPointerException e){
-//            e.printStackTrace();
-//        }
-//        System.out.println("结束日志");
-        //Test1();
-        //System.out.println(func3());
+
+        // 代码中产生的异常，会沿着调用栈，向调用者方向传递
+        // 直到传递到某个方法具有合适的 try catch 语句（catch 中要捕获的异常类型和实际）来捕获异常
+        // 如果一直传递到 main 方法都没有合适的 try catch ，交给 JVM 处理（程序强制终止，并打印出异常调用栈）
+        try{
+            func1();
+        }catch(NullPointerException e){
+            e.printStackTrace();
+        }
+        System.out.println("结束日志");
+
+        Test1();
+        System.out.println(func3());
 
         Scanner sc = new Scanner(System.in);
         try{
@@ -62,6 +78,7 @@ public class ExceptionTest {
     }
 
     public static void func2(){
+        // IDEA surround 功能：把某个代码包裹一些其他逻辑（ctrl + alt + t）
         String str = null;
         System.out.println(str.length());
     }

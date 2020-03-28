@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7484d178-f1ea-4ea3-981c-483f06742b45" name="默认" comment="多态、抽象类、String类">
-      <change afterPath="$PROJECT_DIR$/src/ExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Collection/Collection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionL/Exception/PasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionL/Exception/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionL/ExceptionTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionL/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExceptionL/ExceptionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +58,16 @@
       <recent name="abstractLearn.animal" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExceptionTest">
-    <configuration name="DClone" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DClone" />
+  <component name="RunManager" selected="Application.ExceptionTest (1)">
+    <configuration name="ExceptionTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExceptionL.ExceptionTest" />
       <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ExceptionL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,6 +75,32 @@
     <configuration name="ExceptionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ExceptionTest" />
       <module name="interF0308" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExceptionTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExceptionL.ExceptionTest1" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ExceptionL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExceptionL.LoginTest" />
+      <module name="interF0308" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ExceptionL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,39 +118,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LString.StringTest" />
-      <module name="interF0308" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LString.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Animal.Test" />
-      <module name="interF0308" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Animal.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExceptionTest (1)" />
+        <item itemvalue="Application.LoginTest" />
+        <item itemvalue="Application.ExceptionTest1" />
         <item itemvalue="Application.ExceptionTest" />
         <item itemvalue="Application.STest" />
-        <item itemvalue="Application.StringTest" />
-        <item itemvalue="Application.DClone" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -137,6 +152,7 @@
       <workItem from="1585225140048" duration="3675000" />
       <workItem from="1585281649073" duration="10322000" />
       <workItem from="1585363030299" duration="5184000" />
+      <workItem from="1585371997522" duration="6810000" />
     </task>
     <task id="LOCAL-00001" summary="多态、、抽象类、String类">
       <created>1585232082693</created>
@@ -175,10 +191,10 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="313" y="139" key="#Notifications/0.0.1440.960@0.0.1440.960" timestamp="1585232165145" />
-    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser" timestamp="1585053594586">
+    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser" timestamp="1585389660863">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser/0.0.1440.960@0.0.1440.960" timestamp="1585053594586" />
+    <state x="526" y="190" key="#com.intellij.ide.util.MemberChooser/0.0.1440.960@0.0.1440.960" timestamp="1585389660863" />
     <state x="505" y="365" width="431" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584524379865">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
@@ -191,22 +207,22 @@
       <screen x="0" y="0" width="1440" height="960" />
     </state>
     <state x="501" y="235" key="FileChooserDialogImpl/0.0.1440.960@0.0.1440.960" timestamp="1585368940394" />
-    <state width="1396" height="255" key="GridCell.Tab.0.bottom" timestamp="1585369033562">
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom" timestamp="1585390425695">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.bottom/0.0.1440.960@0.0.1440.960" timestamp="1585369033562" />
-    <state width="1396" height="255" key="GridCell.Tab.0.center" timestamp="1585369033562">
+    <state width="1396" height="255" key="GridCell.Tab.0.bottom/0.0.1440.960@0.0.1440.960" timestamp="1585390425695" />
+    <state width="1396" height="255" key="GridCell.Tab.0.center" timestamp="1585390425694">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.center/0.0.1440.960@0.0.1440.960" timestamp="1585369033562" />
-    <state width="1396" height="255" key="GridCell.Tab.0.left" timestamp="1585369033562">
+    <state width="1396" height="255" key="GridCell.Tab.0.center/0.0.1440.960@0.0.1440.960" timestamp="1585390425694" />
+    <state width="1396" height="255" key="GridCell.Tab.0.left" timestamp="1585390425694">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.left/0.0.1440.960@0.0.1440.960" timestamp="1585369033562" />
-    <state width="1396" height="255" key="GridCell.Tab.0.right" timestamp="1585369033562">
+    <state width="1396" height="255" key="GridCell.Tab.0.left/0.0.1440.960@0.0.1440.960" timestamp="1585390425694" />
+    <state width="1396" height="255" key="GridCell.Tab.0.right" timestamp="1585390425695">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
-    <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585369033562" />
+    <state width="1396" height="255" key="GridCell.Tab.0.right/0.0.1440.960@0.0.1440.960" timestamp="1585390425695" />
     <state x="313" y="214" key="Vcs.Push.Dialog.v2" timestamp="1585232262485">
       <screen x="0" y="0" width="1440" height="960" />
     </state>
