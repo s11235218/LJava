@@ -1,4 +1,4 @@
-package Collection;
+package Map;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,5 +40,9 @@ public class TestMap {
         }
         map.clear();
         System.out.println(map.isEmpty());
+
+        // 如果插入键值对 key 存在，则覆盖原有 value
+        map.put("及时雨", "晁盖");
+        System.out.println(map);
     }
 }
