@@ -1,8 +1,5 @@
 package Review;
 
-class Animal {
-
-}
 
 public class SeqList<E> {
     // E 泛型参数（相当于形参，在真正对该类实例化时，确定实参）
@@ -29,10 +26,10 @@ public class SeqList<E> {
 //        // 调用 get 返回 Object, 需要向下转型
 //        String str = seqList.get(0);
 //
-//        SeqList<Animal> animals = new SeqList<>();
-//        animals.add(new Animal());
-//        animals.add(new Animal());
-//        Animal animal = animals.get(0);
+        SeqList<Animal> animals = new SeqList<>();
+        animals.add(new Animal());
+        animals.add(new Animal());
+        Animal animal = animals.get(0);
 
         // 装箱拆箱：类型转换
         // 自动拆装箱也就是隐式类型转换
