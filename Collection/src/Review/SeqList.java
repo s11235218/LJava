@@ -1,6 +1,5 @@
 package Review;
 
-
 public class SeqList<E> {
     // E 泛型参数（相当于形参，在真正对该类实例化时，确定实参）
     // 泛型参数一般常见名字：E T KEY VALUE...

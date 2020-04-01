@@ -200,4 +200,41 @@ public class ExerciseTree {
         TreeNode root = buildTree();
         System.out.println(isBalanced(root));
     }
+
+    // 判断完全二叉树
+    public boolean InterviewTree(TreeNode root){
+        if(root == null){
+            return true;
+        }
+        boolean isSecondStep = false;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            TreeNode cur = queue.poll();
+
+            if(!isSecondStep){
+                if(cur.left != null && cur.right != null){
+                    queue.offer(cur.left);
+                    queue.offer(cur.right);
+                } else if(cur.left == null && cur.right != null){
+                    return false;
+                } else if(cur.left != null && cur.right == null){
+                    isSecondStep = true;
+                    queue.offer(cur.left);
+                } else{
+                    isSecondStep = true;
+                }
+                // 第二阶段
+                // 要求任何一个节点都没有子节点
+                if(cur.left != null || cur.right != null){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    // 通过先序遍历结果还原树 再以中序遍历输出
+    
 }
