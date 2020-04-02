@@ -234,7 +234,4 @@ public class ExerciseTree {
         }
         return true;
     }
-
-    // 通过先序遍历结果还原树 再以中序遍历输出
-    
 }

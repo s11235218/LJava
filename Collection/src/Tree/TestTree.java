@@ -1,25 +1,25 @@
 package Tree;
 
 public class TestTree {
-    static class Node{
+    static class TreeNode{
         private char val;
-        private Node right;
-        private Node left;
+        private TreeNode right;
+        private TreeNode left;
 
-        public Node(char val) {
+        public TreeNode(char val) {
             this.val = val;
         }
     }
 
-    public static Node buildTree(){
-        Node a = new Node('A');
-        Node b = new Node('B');
-        Node c = new Node('C');
-        Node d = new Node('D');
-        Node e = new Node('E');
-        Node f = new Node('F');
-        Node g = new Node('G');
-        Node h = new Node('H');
+    public static TreeNode buildTree(){
+        TreeNode a = new TreeNode('A');
+        TreeNode b = new TreeNode('B');
+        TreeNode c = new TreeNode('C');
+        TreeNode d = new TreeNode('D');
+        TreeNode e = new TreeNode('E');
+        TreeNode f = new TreeNode('F');
+        TreeNode g = new TreeNode('G');
+        TreeNode h = new TreeNode('H');
 
         a.left = b;
         a.right = c;
@@ -32,7 +32,7 @@ public class TestTree {
         return a;
     }
 
-    public static void preOrder(Node root){
+    public static void preOrder(TreeNode root){
         if(root == null){
             return;
         }
@@ -41,7 +41,7 @@ public class TestTree {
         preOrder(root.right);
     }
 
-    public static void inOrder(Node root){
+    public static void inOrder(TreeNode root){
         if(root == null){
             return;
         }
@@ -50,7 +50,7 @@ public class TestTree {
         inOrder(root.right);
     }
 
-    public static void afterOrder(Node root){
+    public static void afterOrder(TreeNode root){
         if(root == null){
             return;
         }
@@ -59,14 +59,14 @@ public class TestTree {
         System.out.print(root.val);
     }
 
-    public static int size(Node root){
+    public static int size(TreeNode root){
         if(root == null){
             return 0;
         }
         return 1 + size(root.left) + size(root.right);
     }
 
-    public static int leafSize(Node root){
+    public static int leafSize(TreeNode root){
         if(root == null){
             return 0;
         }
@@ -80,7 +80,7 @@ public class TestTree {
     // 如果 k < 1 只能是空树，返回 0
     // 如果 k == 1 求根节点个数，返回 1
     // k 层节点个数 = 左子树的 k - 1 层节点个数 + 右子树的 k - 1 层节点个数
-    public static int kLevelSize(Node root, int k){
+    public static int kLevelSize(TreeNode root, int k){
         if(k < 1 || root == null){
             return 0;
         }
@@ -92,7 +92,7 @@ public class TestTree {
 
     // 在二叉树中查找指定元素
     // 如果存在就返回该节点引用，如果不存在，就返回 null
-    public static Node find(Node root, char toFind){
+    public static TreeNode find(TreeNode root, char toFind){
         if(root == null){
             return null;
         }
@@ -101,7 +101,7 @@ public class TestTree {
             return root;
         }
         // 分别在左右子树遍历
-        Node res = find(root.left, toFind);
+        TreeNode res = find(root.left, toFind);
         if(res != null) {
             return res;
         }
@@ -109,7 +109,7 @@ public class TestTree {
     }
 
     public static void main(String[] args) {
-        Node root = buildTree();
+        TreeNode root = buildTree();
         System.out.print("先序遍历：");
         preOrder(root);
         System.out.println();
