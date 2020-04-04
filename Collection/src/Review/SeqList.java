@@ -24,7 +24,10 @@ public class SeqList<E> {
 //        seqList.add("b");
 //        // 调用 get 返回 Object, 需要向下转型
 //        String str = seqList.get(0);
-//
+
+        class Animal {
+        }
+        
         SeqList<Animal> animals = new SeqList<>();
         animals.add(new Animal());
         animals.add(new Animal());
