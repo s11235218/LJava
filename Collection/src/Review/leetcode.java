@@ -2,7 +2,7 @@ package Review;
 
 import java.util.*;
 
-public class leetcode {
+public class leetcode{
     static class TreeNode{
         private int val;
         private TreeNode right;
