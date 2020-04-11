@@ -3,7 +3,7 @@ package SortL;
 import java.util.Arrays;
 
 public class TestSort {
-    // 插入排序
+    // 1. 插入排序 稳定排序
     public static void insertSort(int[] array) {
         // [0, bound) 已排序区间
         for (int bound = 1; bound < array.length; bound++) {
@@ -21,6 +21,8 @@ public class TestSort {
         }
     }
 
+    // 2. 希尔排序 不稳定排序
+    // 步长 + 插入排序
     public static void shellSort(int[] array) {
         int gap = array.length / 2;
         while (gap > 1) {
@@ -30,6 +32,7 @@ public class TestSort {
         insertSortGap(array, gap);
     }
 
+    // 步长不定的希尔排序
     private static void insertSortGap(int[] array, int gap) {
         for (int bound = gap; bound < array.length; bound++) {
             int v = array[bound];
@@ -46,6 +49,7 @@ public class TestSort {
         }
     }
 
+    // 3. 选择排序 不稳定排序
     public static void selectSort(int[] array) {
         int size = array.length;
         for (int bound = 0; bound < size; bound++) {
@@ -59,6 +63,7 @@ public class TestSort {
         }
     }
 
+    // 4. 堆排序 不稳定排序
     public static void heapSort(int[] array) {
         // 建堆
         createHeap(array);
@@ -78,6 +83,7 @@ public class TestSort {
         }
     }
 
+    // 向下调整
     private static void shiftDown(int[] array, int heapLength, int index) {
         int parent = index;
         int child = 2 * parent + 1;
@@ -101,6 +107,7 @@ public class TestSort {
         array[j] = tmp;
     }
 
+    // 建堆
     private static void createHeap(int[] array) {
         // 从最后一个非叶子节点出发 向前循环
         for (int i = (array.length - 1 - 1) / 2; i >= 0 ; i++) {
@@ -108,6 +115,7 @@ public class TestSort {
         }
     }
 
+    // 5. 冒泡排序 稳定排序
     public static void bubbleSort(int[] array) {
         for (int bound = 0; bound < array.length; bound++) {
             for (int cur = array.length - 1; cur > bound; cur--) {
@@ -121,9 +129,9 @@ public class TestSort {
     public static void main(String[] args) {
         int[] arr = {9, 5, 2, 7, 3, 6, 8};
         // insertSort(arr);
-        selectSort(arr);
-        // heapSort(arr);
-        bubbleSort(arr);
+        // selectSort(arr);
+        heapSort(arr);
+        // bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
