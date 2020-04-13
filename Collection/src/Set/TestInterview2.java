@@ -82,7 +82,31 @@ public class TestInterview2 {
         ArrayList<String> arrayList = new ArrayList(map.keySet());
         // sort (默认字典序排序) 因此通过比较器自定义比较规则
 
-        Collections.sort(arrayList, new MyComparator(map));
+        // Collections.sort(arrayList, new MyComparator(map));
+
+        // 匿名内部类 只用一次
+//        Collections.sort(arrayList, new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                int count1 = map.get(o1);
+//                int count2 = map.get(o2);
+//                if (count1 == count2) {
+//                    return o1.compareTo(o2);
+//                }
+//                return count2 - count1;
+//            }
+//        });
+
+        // lambda 表达式 本质是匿名方法
+        // o1 o2 是 String 类型
+        Collections.sort(arrayList, (o1, o2) ->  {
+            int count1 = map.get(o1);
+            int count2 = map.get(o2);
+            if (count1 == count2) {
+                return o1.compareTo(o2);
+            }
+            return count2 - count1;
+        });
         return arrayList.subList(0, k);
     }
 
@@ -100,23 +124,27 @@ public class TestInterview2 {
     }
 
     public static void main(String[] args) {
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(1, 10);
-        map.put(2, 20);
-        map.put(3, 30);
-        map.put(4, 40);
+//        Map<Integer, Integer> map = new HashMap<>();
+//        map.put(1, 10);
+//        map.put(2, 20);
+//        map.put(3, 30);
+//        map.put(4, 40);
+//
+//        // 1. 使用迭代器
+//        // Entry 表示一个键值对 (jey, value)
+//        // entrySet 包含 Entry 的 Set Set<Entry<Integer, Integer>>
+//        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
+//        while (iterator.hasNext()) {
+//            Map.Entry<Integer, Integer> entry = iterator.next();
+//            System.out.println(entry.getKey() + ": " + entry.getValue());
+//        }
+//        // 2. 使用 for each
+//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//            System.out.println(entry.getKey() + ": " + entry.getValue());
+//        }
 
-        // 1. 使用迭代器
-        // Entry 表示一个键值对 (jey, value)
-        // entrySet 包含 Entry 的 Set Set<Entry<Integer, Integer>>
-        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<Integer, Integer> entry = iterator.next();
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
-        // 2. 使用 for each
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
+        int[] array = {9, 5, 2, 7};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 }
