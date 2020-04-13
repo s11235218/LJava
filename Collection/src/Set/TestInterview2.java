@@ -1,7 +1,6 @@
 package Set;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TestInterview2 {
     static class Node {
@@ -31,5 +30,93 @@ public class TestInterview2 {
         }
         // 返回新链表的头节点
         return map.get(head);
+    }
+
+    public int numJewelsInStones(String J, String S) {
+        Set<Character> set = new HashSet<>();
+        // 1. 遍历石头数组 加入到 set 中
+        for (char c : J.toCharArray()) {
+            set.add(c);
+        }
+        int ret = 0;
+        // 2. 遍历宝石数组 用每个元素取 set 中查找
+        for (char c : S.toCharArray()) {
+            if (set.contains(c)) {
+                ret++;
+            }
+        }
+        return ret;
+    }
+
+    static class MyComparator implements Comparator<String> {
+        private Map<String, Integer> map;
+
+        public MyComparator(Map<String, Integer> map) {
+            this.map = map;
+        }
+
+        @Override
+        public int compare(String o1, String o2) {
+            int count1 = map.get(o1);
+            int count2 = map.get(o2);
+            if (count1 == count2) {
+                return o1.compareTo(o2);
+            }
+            // o1 < o2 return < 0
+            // o1 > o2 return > 0
+            // o1 = o2 return = 0
+            // count1 - count2 升序 出现少的较小
+            // count2 - count1 降序 出现多的较小
+            return count2 - count1;
+        }
+    }
+
+    public List<String> topKFrequent(String[] words, int k) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String x : words) {
+            Integer count = map.getOrDefault(x, 0);
+            map.put(x, count + 1);
+        }
+        // 2. 把统计到的字符串内容放到 ArrayList
+        // keySet 相当于得到了一个 Set  Set 中存放的所有 key
+        ArrayList<String> arrayList = new ArrayList(map.keySet());
+        // sort (默认字典序排序) 因此通过比较器自定义比较规则
+
+        Collections.sort(arrayList, new MyComparator(map));
+        return arrayList.subList(0, k);
+    }
+
+    static class MyEntry<K, V> {
+        K key;
+        V value;
+
+        K getKey() {
+            return key;
+        }
+
+        V getValue() {
+            return value;
+        }
+    }
+
+    public static void main(String[] args) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(1, 10);
+        map.put(2, 20);
+        map.put(3, 30);
+        map.put(4, 40);
+
+        // 1. 使用迭代器
+        // Entry 表示一个键值对 (jey, value)
+        // entrySet 包含 Entry 的 Set Set<Entry<Integer, Integer>>
+        Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<Integer, Integer> entry = iterator.next();
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        // 2. 使用 for each
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 }
