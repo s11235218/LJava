@@ -52,6 +52,5 @@ public class Test1 {
             }
         }, "练习1").start();
         System.out.println("main");
-
     }
 }
