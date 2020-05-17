@@ -46,12 +46,30 @@ public class InterruptThread {
 //        // 特殊情况出现 中断线程
 //        thread1.interrupt(); //thread1.isInterrupted = true;
 
-        // 片段1
-        Thread thread = new Thread(new Runnable() {
+//        // 片段3
+//        Thread thread = new Thread(new Runnable() { // isInterrupted = true
+//            @Override
+//            public void run() {
+//                for (int i = 0; i < 10; i++) {
+//                    // Thread.interrupted():返回当前的中断标志位，并重置
+//                    //  boolean tmp = isInterrupted;
+//                    //  isInterrupted = false;
+//                    //  return tmp;
+//                    System.out.println(Thread.interrupted());
+//                }
+//            }
+//        });
+//        thread.start();
+//        // 特殊情况出现 中断线程
+//        thread.interrupt();
+
+        // 片段4 线程对象.isInterrupt() 作用 只返回中断标志位 不做任何修改
+        Thread thread = new Thread(new Runnable() { // isInterrupted = true
             @Override
             public void run() {
                 for (int i = 0; i < 10; i++) {
-                    System.out.println(Thread.interrupted());
+                    // Thread.interrupted():返回当前的中断标志位，并重置
+                    System.out.println(Thread.currentThread().isInterrupted());
                 }
             }
         });
