@@ -1,18 +1,19 @@
-package learn3;
+package learn;
 
-// 有一个共享变量，初始0 启动20个线程 每个线程循环10000次，每次循环将共享变量++
-public class  UnSafeThread {
-
+public class SafeThread {
     private static int SUM;
 
-    // 线程不安全
+    public static synchronized void increment(int n) {
+        SUM++;
+    }
+    
     public static void main(String[] args) {
         for (int i = 0; i < 20; i++) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     for (int j = 0; j < 10000; j++) {
-                        SUM++;
+                        increment(j);
                     }
                 }
             }).start();
