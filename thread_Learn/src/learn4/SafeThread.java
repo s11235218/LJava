@@ -1,4 +1,4 @@
-package learn;
+package learn4;
 
 public class SafeThread {
     private static int SUM;
@@ -6,7 +6,7 @@ public class SafeThread {
     public static synchronized void increment(int n) {
         SUM++;
     }
-    
+
     public static void main(String[] args) {
         for (int i = 0; i < 20; i++) {
             new Thread(new Runnable() {
