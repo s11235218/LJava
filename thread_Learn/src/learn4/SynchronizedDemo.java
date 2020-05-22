@@ -22,7 +22,17 @@ public class SynchronizedDemo {
          */
         Object o = new Object();
         synchronized (o) {
+            /**
+             * 1. 对象锁：每个对象都有对象头 包含锁
+             * 2. synchronized 获取对象锁的操作
+             *  （1） 申请对象锁
+             *  （2） 申请成功：进入代码块
+             *  （3） 申请失败：进入一个同步队列阻塞
+            * */
+            Object o1 = new Object();
+            synchronized(o1){
 
+            }
         }
     }
 }
