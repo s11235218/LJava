@@ -11,8 +11,11 @@ public class StartVsRun {
         System.out.println("main");
 
         for (int i = 0; i < 5; i++) {
-            new Thread(()->{
-                System.out.println(Thread.currentThread().getName());
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    Thread.currentThread().getName();
+                }
             }).start();
         }
     }
