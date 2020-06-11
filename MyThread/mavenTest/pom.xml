@@ -7,14 +7,19 @@
     <groupId>org.example</groupId>
     <artifactId>mavenTest</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <!-- 依赖包 -->
     <dependencies>
+        <!-- Servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -24,6 +29,19 @@
     </dependencies>
 
     <build>
-        <finalName></finalName>
+        <!-- 打包的文件名 -->
+        <finalName>mavenTest</finalName>
+        <!-- 编译插件：配置JDK版本号和编码格式 -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
