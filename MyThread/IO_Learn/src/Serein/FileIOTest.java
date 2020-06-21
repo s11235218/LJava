@@ -59,10 +59,5 @@ public class FileIOTest {
             String s = new String(bytes, 0, length);
             System.out.println(s);
         }
-
-        while ((length = bis.read(bytes)) != -1) {
-            String s = new String(bytes, 0, length);
-            System.out.println(s);
-        }
     }
 }

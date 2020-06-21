@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -12,7 +13,7 @@ import java.io.PrintWriter;
  * 通过http请求路径 /login 路径映射到本Servlet，通过@WebServlet中的配置路径关联
  * @WebServlet("/login") 一定以/开头
  * */
-@WebServlet("/login")
+@WebServlet(value = "/login", loadOnStartup = 0)
 public class LoginServlet extends HttpServlet {
 
     @Override
@@ -29,7 +30,17 @@ public class LoginServlet extends HttpServlet {
 
         PrintWriter pw = resp.getWriter();
         if ("abc".equals(username) && "123".equals(password)) {
-            pw.println("登录成功");
+            /*
+            * 获取当前http请求的Session
+            * 如果获取不到，参数为true，创建一个；如果false，返回null
+            * 一般使用：登录且用户身份校验通过，getSession();存放用户信息
+            *          访问敏感资源时：getSession(false),然后判断是否为null
+            *          还可以通过存放的用户信息，校验访问权限
+            * 服务端保存session的结构为Map<V, Map<K, V>>
+            * */
+            HttpSession session = req.getSession();// =getSession(true)
+            session.setAttribute("user", username);
+            resp.sendRedirect("index.html");
         } else {
             pw.println("登录失败");
         }
