@@ -13,6 +13,8 @@ public class DaemonTest {
                 }
             }
         }, "FirstTest");
+        // 设置守护线程：后台进程
+        // 非守护线程：工作线程
         t.setDaemon(true);
         t.start();
     }

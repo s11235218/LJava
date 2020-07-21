@@ -1,4 +1,4 @@
-package Thread3;
+package Thread2;
 
 public class Advantage {
 
@@ -8,8 +8,9 @@ public class Advantage {
 
     private static void increment() {
         int count = 10_1000_1000;
+        int r = 0;
         for (int i = 0; i < count; i++) {
-            count--;
+            r++;
         }
     }
 
@@ -35,7 +36,7 @@ public class Advantage {
             }).start();
         }
         while (Thread.activeCount() > 1) {
-            Thread.yield();
+            Thread.yield();// 将当前线程由运行态-->就绪态
         }
         long end = System.currentTimeMillis();
         System.out.printf("并发执行时间：%s毫秒\n", end - start);

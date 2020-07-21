@@ -1,4 +1,4 @@
-package Thread3;
+package Thread2;
 
 public class ThreadAdvantage {
     // 多线程并不一定就能提高速度，可以观察count不同，实际的运行效果也是不同的
