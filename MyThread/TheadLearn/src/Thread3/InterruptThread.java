@@ -28,7 +28,6 @@ public class InterruptThread {
         t.interrupt();
     }
 
-
     public static void test2() throws InterruptedException {
         Thread t = new Thread(new Runnable() {
             @Override
