@@ -12,7 +12,7 @@ public class UnsafeThread {
 
     private static final int NUM = 20;
     private static final int COUNT = 10000;
-    private static int SUM;
+    private static int SUM;// int数据类型，值处于-128到127之间，存在于常量池中，超出范围，处于堆
 
     public static void main(String[] args) {
         // 同时启动20个线程，每个线程对同一个变量执行操作：循环1000次，每次循环++操作
