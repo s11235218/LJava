@@ -1,7 +1,5 @@
 package review.se;
 
-import org.junit.Test;
-
 import java.util.Scanner;
 
 public class ScannerTest {
@@ -19,7 +17,8 @@ public class ScannerTest {
         // 浮点数字类型，可以使用hasNextDouble()搭配nextDouble()，
         // 或者使用精度更好的hasNextBigDecimal()搭配nextBigDecimal()
         // 此外，也可以使用hasNextLine()搭配nextLine()自行解析整行数据
-        while(sc.hasNextInt()){
+        // scanner.hasNext, next, hasNextLine, nextLine, hasNextInt, nextInt...为阻塞方法
+        while(sc.hasNextInt()){  //空格、换行符
             System.out.println("第"+(++index)+"次");
 
             int i1 = sc.nextInt();

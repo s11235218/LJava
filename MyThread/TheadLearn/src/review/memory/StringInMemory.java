@@ -61,7 +61,7 @@ public class StringInMemory {
      * "计算机软件"会在常量池中创建字符串对象并返回引用
      */
     @Test
-    public void test6(){//false
+    public void test6() {//false
         String s = new StringBuilder("计算机").append("软件").toString();
         Assert.assertTrue(s == "计算机软件");
     }
