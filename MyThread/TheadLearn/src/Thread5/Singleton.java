@@ -1,5 +1,11 @@
 package Thread5;
 
+/**线程状态
+ * 阻塞：竞争失败的线程全部放入同步队列
+ * 唤醒：JVM查询同步队列竞争这个对象锁失败的线程，全部唤醒，重新竞争
+ *
+ * */
+
 /**volatile 作用：
  * 1.禁止指令重排序
  * 2.建立内存屏障
@@ -17,7 +23,7 @@ public class Singleton {
     public Singleton() {
     }
 
-    //    // 饿汉模式
+//    // 饿汉模式
 //    private static Singleton SINGLETON = new Singleton();
 //    public static Singleton getInstance() {
 //        return SINGLETON;
@@ -53,4 +59,3 @@ public class Singleton {
         return SINGLETON;
     }
 }
-
