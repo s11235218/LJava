@@ -31,7 +31,7 @@ public class BreadOperator {
                         }
                         SUM += 3;// 生产面包
                         Thread.sleep(10);
-                        BreadOperator.class.notify();
+                        BreadOperator.class.notifyAll();
                         System.out.println(Thread.currentThread().getName() + "生产了，库存为：" + SUM);
                     }
                     Thread.sleep(10);
@@ -61,7 +61,7 @@ public class BreadOperator {
                         // notifyAll()唤醒全部wait()阻塞的线程
                         // 在synchronized代码块结束后，也就是释放锁之后，才会唤醒
                         // synchronized结束后，wait()和synchronized代码行阻塞的线程，都会被唤醒
-                        BreadOperator.class.notify();
+                        BreadOperator.class.notifyAll();
                         System.out.println(Thread.currentThread().getName() + "消费了，库存为：" + SUM);
                     }
                     Thread.sleep(10);
