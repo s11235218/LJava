@@ -2,11 +2,15 @@ package Thread7;
 
 /**
  * 有三个线程，分别打印A，B，C
- * 打印结果：循环打印ABC，打印十次
+ * 打印结果：循环打印ABC，打印10次
  * */
 
 public class SequencePrint {
     private static volatile int INDEX;
+
+    public static void print() {
+
+    }
 
     public static void main(String[] args) {
         new Thread(new Runnable() {
@@ -19,7 +23,7 @@ public class SequencePrint {
                                 SequencePrint.class.wait();
                             }
                             INDEX++;
-                            System.out.println("A");
+                            System.out.print("A");
                             SequencePrint.class.notifyAll();
                         }
                     }
@@ -39,7 +43,7 @@ public class SequencePrint {
                                 SequencePrint.class.wait();
                             }
                             INDEX++;
-                            System.out.println("B");
+                            System.out.print("B");
                             SequencePrint.class.notifyAll();
                         }
                     }
