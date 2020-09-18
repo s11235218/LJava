@@ -6,26 +6,44 @@ public class MyTimer1 {
 
     private static BlockingDeque<Runnable> queue = (BlockingDeque<Runnable>) new PriorityBlockingQueue();
 
-    public MyTimer1() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    while (true) {
-                        MyTimerTask task = (MyTimerTask) queue.take();
-                        synchronized (queue) {
-                            long current = System.currentTimeMillis();
-                            if (task.next > current) {
-                                queue.wait(current - task.next);
+    public MyTimer1(int count) {
+        for (int i = 0; i < count; i++) {
+            new Thread(new MyWorker(queue)).start();
+        }
+    }
+
+    private static class MyWorker implements Runnable {
+
+        private BlockingDeque<Runnable> queue;
+
+        public MyWorker(BlockingDeque<Runnable> queue) {
+            this.queue = queue;
+        }
+
+        @Override
+        public void run() {
+            try {
+                while (true) {
+                    // 本身就是线程安全，所以这里方法调用不用放在同步代码块
+                    MyTimerTask task = (MyTimerTask) queue.take();
+                    synchronized (queue) {
+                        long current = System.currentTimeMillis();
+                        if (task.next > current) {
+                            queue.wait(task.next - current);
+                            queue.put(task);
+                        }else{
+                            task.task.run();
+                            if (task.period > 0){
+                                task.next = task.next + task.period;
                                 queue.put(task);
                             }
                         }
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }).start();
+        }
     }
 
     public static void schedule(Runnable task, long delay, long period) {
