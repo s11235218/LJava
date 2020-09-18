@@ -78,6 +78,7 @@ public class MyBlockingQueue<E> {
                 }
             }).start();
         }
+
         while (true) {
             int num = queue.take();
             System.out.println(num);
