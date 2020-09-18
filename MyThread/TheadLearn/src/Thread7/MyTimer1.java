@@ -7,13 +7,34 @@ public class MyTimer1 {
     private static BlockingDeque<Runnable> queue = (BlockingDeque<Runnable>) new PriorityBlockingQueue();
 
     public MyTimer1() {
-
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (true) {
+                        MyTimerTask task = (MyTimerTask) queue.take();
+                        synchronized (queue) {
+                            long current = System.currentTimeMillis();
+                            if (task.next > current) {
+                                queue.wait(current - task.next);
+                                queue.put(task);
+                            }
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     public static void schedule(Runnable task, long delay, long period) {
 
         try {
             queue.put(new MyTimerTask(task, System.currentTimeMillis() + delay, period));
+            synchronized (queue) {
+                queue.notifyAll();
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
