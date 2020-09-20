@@ -29,6 +29,7 @@ public class MyTimer1 {
                     synchronized (queue) {
                         long current = System.currentTimeMillis();
                         if (task.next > current) {
+                            // 阻塞当前线程 等待时间差
                             queue.wait(task.next - current);
                             queue.put(task);
                         }else{
