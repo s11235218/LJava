@@ -19,7 +19,7 @@ public class ThreadPoolExecutorTest {
                 new ThreadFactory() {
                     @Override
                     public Thread newThread(Runnable r) {
-                        return null;
+                        return new MyThread1();
                     }
                 },
                 // 拒绝策略：
@@ -43,5 +43,9 @@ public class ThreadPoolExecutorTest {
         });
 
         System.out.println("在做事情");
+    }
+
+    private static class MyThread1 extends Thread {
+        private String name;
     }
 }

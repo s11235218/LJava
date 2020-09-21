@@ -25,6 +25,7 @@ public class MyBlockingQueue<E> {
         items[putIndex] = e; // 存放元素
         size++;
         notifyAll();
+        
     }
 
     /** 线程间通信，推荐做法：
