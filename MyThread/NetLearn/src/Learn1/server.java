@@ -16,7 +16,7 @@ public class server {
     private static final ExecutorService POOL = Executors.newCachedThreadPool();
 
     public static void main(String[] args) throws IOException {
-        ServerSocket server = new ServerSocket(9000);
+        ServerSocket server = new ServerSocket(PORT);
         while (true) {
             // 阻塞等待，直到有新的客户端连接
             Socket client = server.accept();
@@ -38,7 +38,6 @@ public class server {
             try {
                 BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
-                
             } catch (IOException e) {
                 e.printStackTrace();
             }
