@@ -9,11 +9,11 @@ import java.util.Scanner;
  *    3.文件：File的IO类，作为文件操作的IO流
  *    4.二进制数组操作：ByteArray
  *    5.Java对象：Object
- *    3.特殊的：PrintWriter表示打印输出到某个设备
+ *    6.特殊的：PrintWriter表示打印输出到某个设备
  *             Scanner表示接受某个设备的输入（接受控制台输入时，从System.in键盘作为输入设备）
  *             StringWriter/StringReader
- *             
  *
+ * Java中的IO流，是可以包裹其他IO流的
  * @author Sssserein
  * @creed: Talk is cheap,show me the code
  * @date 2020/9/21 9:53
