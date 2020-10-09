@@ -25,14 +25,13 @@ public class client {
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
                     out.println(line);
-
                 }
             }
         }).start();
         String str;
-        while ((str = in.readLine()) != null) {
+        while ((str = in.readLine()) != null && !client.equals("exit")) {
             System.out.println(str);
         }
-
+        client.close();
     }
 }

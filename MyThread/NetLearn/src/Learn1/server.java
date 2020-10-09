@@ -40,11 +40,13 @@ public class server {
                 String str;
                 // 阻塞等待客户端数据的输入
                 int i = 1;
-                while ((str = in.readLine()) != null) {// IO流在结束时，返回才是null
+                while ((str = in.readLine()) != null && !str.equals("exit")) {// IO流在结束时，返回才是null
                     System.out.println(str);
                     out.println(i + ".确实不错！");
                     i++;
                 }
+                out.println("exit");
+                client.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
