@@ -38,10 +38,13 @@ public class server {
                 BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
                 PrintWriter out = new PrintWriter(client.getOutputStream(), true);
                 String str;
-                while ((str = in.readLine()) != null) {
+                // 阻塞等待客户端数据的输入
+                int i = 1;
+                while ((str = in.readLine()) != null) {// IO流在结束时，返回才是null
                     System.out.println(str);
+                    out.println(i + ".确实不错！");
+                    i++;
                 }
-                out.println("确实不错！");
             } catch (IOException e) {
                 e.printStackTrace();
             }

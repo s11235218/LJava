@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class client {
 
@@ -17,10 +18,21 @@ public class client {
         Socket client = new Socket(HOST, PORT);
         BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
         PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+        Scanner scanner = new Scanner(System.in);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    out.println(line);
+
+                }
+            }
+        }).start();
         String str;
         while ((str = in.readLine()) != null) {
             System.out.println(str);
         }
-        out.println("今天天气不错！");
+
     }
 }
