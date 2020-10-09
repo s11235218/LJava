@@ -21,7 +21,6 @@ public class server {
             // 阻塞等待，直到有新的客户端连接
             Socket client = server.accept();
             POOL.execute(new Task(client));
-
         }
     }
 
@@ -37,7 +36,12 @@ public class server {
         public void run() {
             try {
                 BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
-                PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
+                PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+                String str;
+                while ((str = in.readLine()) != null) {
+                    System.out.println(str);
+                }
+                out.println("确实不错！");
             } catch (IOException e) {
                 e.printStackTrace();
             }
