@@ -31,6 +31,17 @@ public class client {
         String str;
         while ((str = in.readLine()) != null && !client.equals("exit")) {
             System.out.println(str);
+/**
+ *
+ * @param args
+ * 确认应答机制
+ * 超时重传机制
+ * 连接管理机制单方向建立关系
+ * @return void
+ * @author Sssserein
+ * @creed: Talk is cheap,show me the code
+ * @date 2020/10/12 16:41
+ */
         }
         client.close();
     }
