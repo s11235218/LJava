@@ -119,4 +119,33 @@ public class StringInMemory {
         // s.intern()在字符串常量池生成一个引用，指向s，"计算机软件"这个字符串是s
         Assert.assertTrue(s.intern() == s);
     }
+
+    @Test
+    public void test0() {// 测试不通过
+        String s1 = "hello";
+        String s2 = new StringBuilder("hel").append("lo").toString();
+        Assert.assertTrue(s1 == s2);
+    }
+
+    @Test
+    public void test0_1() {// 测试不通过
+        String s1 = "hello";
+        String s2 = new StringBuilder("hello").toString();
+        Assert.assertTrue(s1 == s2);
+    }
+
+    @Test
+    public void test0_2() {// 测试通过
+        String s1 = "hello";
+        String s2 = new StringBuilder("hel").append("lo").toString();
+        Assert.assertTrue(s1 == s2.intern());
+    }
+
+    @Test
+    public void test0_3() {// 测试通过
+        String s1 = new String("hel") + new String("lo");
+        s1.intern();
+        String s2 = new StringBuilder("hel").append("lo").toString();
+        Assert.assertTrue(s1 == s2.intern());
+    }
 }
