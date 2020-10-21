@@ -144,7 +144,7 @@ public class StringInMemory {
     @Test
     public void test0_3() {// 测试通过
         // 方法栈：s1局部变量
-        // s1:常量池里生成的对象：hel。lo
+        // s1:常量池里生成的对象：hel.lo
         // 堆生成的对象：new String("hel") + new String("lo")、字符串 + 操作生成的new String("hello")
         String s1 = new String("hel") + new String("lo");
         // 字符串常量池中，获取或创建一个字符串对象或引用
@@ -153,6 +153,13 @@ public class StringInMemory {
         String s2 = new StringBuilder("hel").append("lo").toString();
         // s1的引用地址指向堆里面new String("hello")
         // s2.intern();
+        Assert.assertTrue(s1 == s2.intern());
+    }
+
+    @Test
+    public void test0_4() {
+        String s1 = new String("hello");
+        String s2 = new StringBuilder("hel").append("lo").toString();
         Assert.assertTrue(s1 == s2.intern());
     }
 }
