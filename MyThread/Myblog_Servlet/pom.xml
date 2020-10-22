@@ -61,7 +61,7 @@
         <!--            <version>1.2</version>-->
         <!--        </dependency>-->
 
-        <!-- Junit: java的一种测试框架 -->
+        <!-- JUnit: java的一种测试框架 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
