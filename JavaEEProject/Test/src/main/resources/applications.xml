@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--通过bean标签定义bean对象,Spring Bean容器是通过id来进行管理的,
+        id相当于bean的名字，String可以通过id找到bean对象
+        默认是单例模式 -->
+    <!-- 通过无参的构造方法，创建一个对象，如果该类型没有无参的构造方法，就会报错 -->
+    <bean id="Serein" class="java.lang.String">
+        <constructor-arg value="小石"></constructor-arg>
+    </bean>
+<!--    <bean class="java.lang.String"></bean>-->
+
+    <bean id="duck1" class="Serein.Duck">
+        <property name="name" value="Female"></property>
+        <property name="age" value="18"></property>
+    </bean>
+
+    <bean id="duck2" class="Serein.Duck2">
+        <constructor-arg name="n" value="烤鸭" />
+        <constructor-arg name="a" value="3" />
+    </bean>
+</beans>
