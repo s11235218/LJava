@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
+
     public static void main(String[] args) {
         ApplicationContext context = new
                 ClassPathXmlApplicationContext("applications.xml");
@@ -15,8 +16,8 @@ public class Main {
 //        System.out.println(s2);
 
         // 通过类型获取bean对象，如果该类型有多个对象，就会报错；只支持一个该类型的对象
-        String s3 = context.getBean(String.class);
-        System.out.println(s3);
+//        String s3 = context.getBean(String.class);
+//        System.out.println(s3);
 
         Duck duck = (Duck) context.getBean("duck1");
         System.out.println(duck);

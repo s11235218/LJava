@@ -13,8 +13,11 @@
     </bean>
 <!--    <bean class="java.lang.String"></bean>-->
 
+    <bean id="s1" class="java.lang.String" >
+        <constructor-arg value="Female"></constructor-arg>
+    </bean>
     <bean id="duck1" class="Serein.Duck">
-        <property name="name" value="Female"></property>
+        <property name="name" ref="s1"></property>
         <property name="age" value="18"></property>
     </bean>
 
