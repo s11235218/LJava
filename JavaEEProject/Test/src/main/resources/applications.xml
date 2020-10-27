@@ -25,4 +25,22 @@
         <constructor-arg name="n" value="烤鸭" />
         <constructor-arg name="a" value="3" />
     </bean>
+
+    <bean id="dk1" class="Serein.Duck3">
+        <property name="name" value="北京烤鸭"></property>
+        <property name="age" value="2"></property>
+        <property name="next" ref="dk2"></property>
+    </bean>
+
+    <bean id="dk2" class="Serein.Duck3">
+        <property name="name" value="甜皮鸭"></property>
+        <property name="age" value="1"></property>
+        <property name="next" ref="dk3"></property>
+    </bean>
+
+    <bean id="dk3" class="Serein.Duck3">
+        <property name="name" value="酱鸭"></property>
+        <property name="age" value="3"></property>
+    </bean>
+
 </beans>

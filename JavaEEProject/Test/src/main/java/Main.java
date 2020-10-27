@@ -1,5 +1,6 @@
 import Serein.Duck;
 import Serein.Duck2;
+import Serein.Duck3;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -26,5 +27,7 @@ public class Main {
         System.out.println(duck1);
 
 
+        Duck3 dk1 = (Duck3) context.getBean("dk1");
+        System.out.println(dk1);
     }
 }
