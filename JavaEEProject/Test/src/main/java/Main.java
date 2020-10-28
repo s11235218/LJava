@@ -1,6 +1,8 @@
 import Serein.Duck;
 import Serein.Duck2;
 import Serein.Duck3;
+import Serein.DuckList;
+import com.sun.org.apache.bcel.internal.generic.DLOAD;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -26,8 +28,10 @@ public class Main {
         Duck2 duck1 = (Duck2) context.getBean("duck2");
         System.out.println(duck1);
 
-
         Duck3 dk1 = (Duck3) context.getBean("dk1");
         System.out.println(dk1);
+
+        DuckList store = (DuckList) context.getBean("DuckStore");
+        System.out.println(store);
     }
 }

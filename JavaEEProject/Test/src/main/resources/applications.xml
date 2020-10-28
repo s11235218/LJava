@@ -43,4 +43,26 @@
         <property name="age" value="3"></property>
     </bean>
 
+    <bean id="DuckStore" class="Serein.DuckList">
+        <property name="ducks">
+            <list>
+                <ref bean="dk_1"></ref>
+                <ref bean="dk_2"></ref>
+                <ref bean="dk_3"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dk_1" class="Serein.Duck">
+        <property name="name" ref="s1"></property>
+        <property name="age" value="18"></property>
+    </bean>
+    <bean id="dk_2" class="Serein.Duck">
+        <property name="name" value="s2"></property>
+        <property name="age" value="18"></property>
+    </bean>
+    <bean id="dk_3" class="Serein.Duck">
+        <property name="name" value="s3"></property>
+        <property name="age" value="18"></property>
+    </bean>
 </beans>
