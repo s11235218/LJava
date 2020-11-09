@@ -9,6 +9,7 @@ import serein.model.User;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,9 +39,14 @@ public class UserController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public Object login() {
-
+    public Object login(User user, HttpServletRequest req) {
         // return test;
+        // 模拟用户登录，在数据库校验用户名及密码
+        if (!"abc".equals(user.getName())) {
+            throw new RuntimeException("用户失败！");
+        }
+        HttpSession session = req.getSession();
+        session.setAttribute("user", user);
         return user;
     }
 
@@ -95,7 +101,7 @@ public class UserController {
     @RequestMapping("/test4")
     @ResponseBody
     public Object test4() {
-        return null;// 响应体为空
+        return null;// 响应体为空==>配置ControllerAdvice时，不会进入重写响应体方法
     }
 
     @RequestMapping("/test5")

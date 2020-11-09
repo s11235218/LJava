@@ -1,5 +1,7 @@
 package serein.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -12,6 +14,10 @@ import java.util.Map;
 
 @Configuration
 public class AppConfig implements WebMvcConfigurer { // web框架，执行初始化工作时，会调用接口方法
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
 
     /**
      * 添加web配置：添加拦截器（根据路径拦截）
@@ -29,7 +35,7 @@ public class AppConfig implements WebMvcConfigurer { // web框架，执行初始
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 实现用户会话管理功能
-        registry.addInterceptor(new LoginInterceptor())// 链式方法调用，当前类型的方法，返回值就是this
+        registry.addInterceptor(new LoginInterceptor(objectMapper))// 链式方法调用，当前类型的方法，返回值就是this
                 .addPathPatterns("/user/**")// 添加拦截的路径
                 .excludePathPatterns("/user/login");// 添加要排除的路径
     }
