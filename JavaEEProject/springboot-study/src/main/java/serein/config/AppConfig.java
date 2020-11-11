@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import serein.config.interceptor.LoginInterceptor;
+import serein.controller.UserController;
 import serein.model.User;
 
 import java.util.HashMap;
@@ -18,7 +19,8 @@ public class AppConfig implements WebMvcConfigurer { // web框架，执行初始
     @Autowired
     private ObjectMapper objectMapper;
 
-
+    @Autowired
+    private UserController userController;
     /**
      * 添加web配置：添加拦截器（根据路径拦截）
      *     /*：代表一级路径，如/user/*，可以匹配到/user/abc，不能匹配到/user/abc/1
@@ -34,6 +36,8 @@ public class AppConfig implements WebMvcConfigurer { // web框架，执行初始
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        System.out.println("--------------");
+        System.out.println(userController.getClass());
         // 实现用户会话管理功能
         registry.addInterceptor(new LoginInterceptor(objectMapper))// 链式方法调用，当前类型的方法，返回值就是this
                 .addPathPatterns("/user/**")// 添加拦截的路径
@@ -63,5 +67,4 @@ public class AppConfig implements WebMvcConfigurer { // web框架，执行初始
         u.setPassword("456");
         return u;
     }
-
 }

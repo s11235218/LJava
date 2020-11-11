@@ -40,6 +40,8 @@ public class AppControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @Override
     public ResponseResult beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
+        // 如果存在返回字符串的情况，需要返回字符串类型，否则会报错
+        // 解决方案：判断body对象的类型：如果是字符串，就返回objectmapper序列化后的字符串，否则返回统一封装的类型
         ResponseResult r = new ResponseResult();
         r.setSuccess(true);
         r.setData(body);
