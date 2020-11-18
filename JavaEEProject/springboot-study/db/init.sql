@@ -22,3 +22,9 @@ create table record(
     foreign key (stu_id) references stu(id),
     foreign key (course_id) references course(id)
 );
+insert into stu(name) value ('张三');
+insert into course(name) value ('数学');
+insert into record(score, stu_id, course_id) value (90, 1, 1);
+insert into record(score, stu_id, course_id) value (121, 1, 1);
+
+

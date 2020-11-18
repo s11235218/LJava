@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import serein.model.Record;
 import serein.model.RecordExample;
+import serein.model.Stu;
 
 import java.util.List;
 @Mapper
@@ -29,4 +30,6 @@ public interface RecordMapper {
     int updateByPrimaryKeySelective(Record record);
 
     int updateByPrimaryKey(Record record);
+
+    List<Record> test(Stu stu);
 }
