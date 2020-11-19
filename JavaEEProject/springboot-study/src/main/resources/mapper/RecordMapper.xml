@@ -195,7 +195,7 @@
   </update>
 
   <select id="test" parameterType="serein.model.Stu" resultMap="BaseResultMap">
-    select r.id, r.score, r.stu_id, r.course_id from record r;
+    select r.id, r.score, r.stu_id, r.course_id from record r
         join stu s on s.id=r.stu_id
     where s.name=#{name}
   </select>

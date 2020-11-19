@@ -12,7 +12,6 @@ import java.util.List;
 public class RecordService {
 
     @Autowired
-
     private RecordMapper recordMapper;
 
     public Record query(Integer id) {
