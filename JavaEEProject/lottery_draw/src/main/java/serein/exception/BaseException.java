@@ -1,4 +1,23 @@
 package serein.exception;
 
-public class BaseException {
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+// 自定义异常的父类
+@Getter
+@Setter
+public class BaseException extends RuntimeException {
+
+    private String code;
+
+    public BaseException(String code, String message) {
+        super(message);
+        this.code = code;
+    }
+
+    public BaseException(String code, String message, Throwable cause) {
+        super(message, cause);
+        this.code = code;
+    }
 }
