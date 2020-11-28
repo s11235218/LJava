@@ -8,4 +8,5 @@ import serein.model.User;
 public interface UserMapper extends BaseMapper<User> {
 
     User login(User user);
+
 }
