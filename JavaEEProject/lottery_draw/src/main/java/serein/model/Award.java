@@ -6,6 +6,7 @@ import lombok.ToString;
 import serein.base.BaseEntity;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 奖项
@@ -41,4 +42,6 @@ public class Award extends BaseEntity {
      * 创建时间
      */
     private Date createTime;
+
+    private List<Integer> luckyMemberIds;// 查询设置接口需要的字段
 }

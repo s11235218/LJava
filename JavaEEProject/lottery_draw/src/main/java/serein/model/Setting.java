@@ -6,6 +6,7 @@ import lombok.ToString;
 import serein.base.BaseEntity;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 抽奖设置
@@ -31,4 +32,9 @@ public class Setting extends BaseEntity {
      * 创建时间
      */
     private Date createTime;
+
+    // 查询设置接口，需要的三个自定义字段
+    private User user;
+    private List<Award> awards;// Award
+    private List<Member> members;
 }
