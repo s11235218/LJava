@@ -2,6 +2,7 @@ package serein.config.interceptor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.servlet.HandlerInterceptor;
 import serein.base.ResponseResult;
 
@@ -28,6 +29,9 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (session != null && session.getAttribute("user") != null) {
             return true;// 登录，继续执行Controller中的方法
         }
+
+        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);// 浏览器控制台用来解析的数据格式和编码
+        response.setCharacterEncoding("UTF-8"); // 设置响应体编码，和Java文件的编码一致
 
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
         // 前端通过状态码已经处理，可以不返回响应体内容
