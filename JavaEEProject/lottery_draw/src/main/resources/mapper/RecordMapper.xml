@@ -122,4 +122,18 @@
       #{item}
     </foreach>
   </delete>
+
+
+
+  <delete id="deleteByCondition" parameterType="serein.model.Record">
+    delete from record
+    <trim prefix="where" suffixOverrides="and">
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=INTEGER}
+      </if>
+      <if test="awardId != null">
+        award_id = #{awardId,jdbcType=INTEGER}
+      </if>
+    </trim>
+  </delete>
 </mapper>

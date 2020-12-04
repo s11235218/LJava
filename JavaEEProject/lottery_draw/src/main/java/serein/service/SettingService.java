@@ -2,13 +2,13 @@ package serein.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import serein.exception.BusinessException;
 import serein.mapper.SettingMapper;
 import serein.model.Award;
 import serein.model.Member;
 import serein.model.Setting;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -45,5 +45,19 @@ public class SettingService {
         setting.setMembers(members);
 
         return setting;
+    }
+
+    @Transactional
+    public void add(Setting setting) {
+        settingMapper.insertSelective(setting);
+    }
+
+    // 默认Spring事务设置：默认的传播方式为Require，当前没有事务，就创建，有就加入
+    @Transactional
+    public void update(Integer id, Integer batchNumber) {
+        // 第一种实现：可以使用mapper已提供单表操作的方法：根据userid查询setting信息，再修改
+        // 第二种实现：自己写sql，一次性修改
+        int num = settingMapper.updateByUserId(id, batchNumber);
+
     }
 }

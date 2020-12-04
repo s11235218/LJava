@@ -51,4 +51,6 @@ public class User extends BaseEntity {
      * 创建时间
      */
     private Date createTime;
+
+    private Integer settingId;
 }

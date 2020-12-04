@@ -122,4 +122,10 @@
       #{item}
     </foreach>
   </delete>
+
+
+
+  <update id="updateByUserId">
+    update setting set batch_number=#{batchNumber} where user_id=#{userId}
+  </update>
 </mapper>

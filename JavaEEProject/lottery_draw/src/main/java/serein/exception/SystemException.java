@@ -8,4 +8,5 @@ public class SystemException extends BaseException {
     public SystemException(String code, String message, Throwable cause) {
         super("SYS"+code, message, cause);
     }
+
 }

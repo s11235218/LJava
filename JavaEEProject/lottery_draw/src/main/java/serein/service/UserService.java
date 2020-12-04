@@ -3,10 +3,12 @@ package serein.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import serein.exception.ClientException;
 import serein.exception.SystemException;
 import serein.mapper.UserMapper;
+import serein.model.Setting;
 import serein.model.User;
 
 import java.io.*;
@@ -23,6 +25,9 @@ public class UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private SettingService settingService;
 
     public User login(User user) {
 
@@ -41,11 +46,29 @@ public class UserService {
         return exist;
     }
 
+    // 默认事务的配置为Spring事物的传播特性=required，事务隔离级别为数据库的默认事务隔离级别
+    @Transactional
     public void register(User user, MultipartFile headFile) {
 
+        //根据用户名查询已有的用户信息，如果有，不允许注册
+        User query = new User();
+        query.setUsername(user.getUsername());
+        User exist = userMapper.selectOne(query);
+        if (exist != null) {
+            throw new ClientException("USR004", "用户已存在！");
+        }
+        // 保存注册用户信息（插入）
         String path = "/" + user.getUsername() + "/" + fileName;
         user.setHead(remotePath + path);
-        userMapper.insertSelective(user);
+        userMapper.insertSelective(user);// 插入成功以后，自增主键通过mybatis的<selectKey>返回对象
+
+        // 注册用户时，完成初始化设置，创建setting数据
+        Setting setting = new Setting();
+        setting.setUserId(user.getId());
+        setting.setBatchNumber(8);
+        settingService.add(setting);
+
+        // 保存注册用户头像文件到本地文件夹
         FileOutputStream fos = null;
         BufferedOutputStream bos = null;
 
@@ -64,8 +87,10 @@ public class UserService {
                     fos.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new SystemException("USER003", "用户注册失败，头像上传错误！");
+            // 打印捕获的异常，抛出自定义异常，统一异常拦截器进行打印自定义异常
+//            e.printStackTrace();
+//            throw new SystemException("USR004", "用户注册失败，头像上传错误！");
+            throw new SystemException("USR004", "用户注册失败，头像上传错误！", e);
         }
     }
 }

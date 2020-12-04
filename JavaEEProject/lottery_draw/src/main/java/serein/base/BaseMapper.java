@@ -6,21 +6,21 @@ public interface BaseMapper<T extends BaseEntity> {
 
     T selectByPrimaryKey(Integer id);
 
-    int insert(T t);
+    int insert(T record);
 
-    int insertSelective(T t);
+    int insertSelective(T record);
 
-    int updateByPrimaryKeySelective(T t);
+    int updateByPrimaryKeySelective(T record);
 
-    int updateByPrimaryKey(T t);
+    int updateByPrimaryKey(T record);
 
     int deleteByPrimaryKey(Integer id);
 
-    T selectOne(T t);
+    T selectOne(T record);
 
     List<T> selectAll();
 
-    List<T> selectByCondition(T t);
+    List<T> selectByCondition(T record);
 
     int deleteByIds(List<Integer> ids);
 }

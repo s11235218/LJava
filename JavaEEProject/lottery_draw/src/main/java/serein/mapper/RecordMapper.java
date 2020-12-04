@@ -6,4 +6,6 @@ import serein.model.Record;
 
 @Mapper
 public interface RecordMapper extends BaseMapper<Record> {
+
+    void deleteByCondition(Record record);
 }

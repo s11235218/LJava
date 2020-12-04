@@ -9,6 +9,7 @@ import serein.model.Setting;
 import serein.model.User;
 import serein.service.SettingService;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @RestController
@@ -30,5 +31,12 @@ public class SettingController {
         Setting setting = settingService.query(user.getId());
         setting.setUser(user);
         return setting;
+    }
+
+    @GetMapping("update")
+    public Object update(Integer batchNumber, HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        settingService.update(user.getId(), batchNumber);
+        return null;
     }
 }
