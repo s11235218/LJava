@@ -27,7 +27,7 @@ public class JSONUtil {
         try {
             return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(o);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException("JSON", e);
+            throw new RuntimeException("JSON序列化失败！", e);
         }
     }
 }
