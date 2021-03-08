@@ -1,37 +1,44 @@
 package serein.Test;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class HttpGetParamTest {
+public class HttpPostParamTest {
 
     public static void main(String[] args) throws Exception {
         // 1.创建HttpClient对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
-        // 设置请求的地址是：http://yun.itheima.com/search?keys=java
-        // 创建URIBuilder
-        URIBuilder uriBuilder = new URIBuilder("http://yun.itheima.com/search");
-
-        // 设置参数
-        uriBuilder.setParameter("keys", "java");
-
         // 2. 创建HttpGet对象，设置url访问地址
-        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        HttpPost httpPost = new HttpPost("http://yun.itheima.com/search");
 
-        System.out.println("发起请求的信息：" + httpGet);
+        // 声明List集合，封装表单中的参数
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        // http://yun.itheima.com/search?keys=java
+        params.add(new BasicNameValuePair("keys", "java"));
+
+        // 创建表单的Entity对象, 第一个参数是封装好的表单数据，第二个参数是编码
+        UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params, "utf8");
+
+
+        // 设置表单的Entity对象到Post请求中
+        httpPost.setEntity(formEntity);
 
         CloseableHttpResponse response = null;
         try {
             // 3. 使用HttpClient发起请求，获取响应
-            response = httpClient.execute(httpGet);
+            response = httpClient.execute(httpPost);
             // 4. 解析响应
             if (response.getStatusLine().getStatusCode() == 200) {
                 String content = EntityUtils.toString(response.getEntity(), "utf8");
