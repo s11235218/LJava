@@ -14,7 +14,7 @@ public class CrawlerFirst {
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
         // 2. 输入网址,发起get请求创建HttpGet对象
-        HttpGet httpGet = new HttpGet("https://www.itcast.cn");
+        HttpGet httpGet = new HttpGet("https://www.baidu.com");
 
         // 3. 按回车，发起请求，返回响应，使用HttpClient对象发起请求
         CloseableHttpResponse response = httpClient.execute(httpGet);
@@ -26,7 +26,5 @@ public class CrawlerFirst {
             String content = EntityUtils.toString(httpEntity, "utf8");
             System.out.println(content);
         }
-
-
     }
 }
