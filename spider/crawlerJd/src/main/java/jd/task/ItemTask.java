@@ -1,7 +1,8 @@
 package jd.task;
 
+import jd.pojo.Item;
+import jd.service.ItemService;
 import jd.util.HttpUtils;
-import org.apache.http.impl.client.HttpClients;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -15,6 +16,9 @@ public class ItemTask {
 
     @Autowired
     private HttpUtils httpUtils;
+
+    @Autowired
+    private ItemService itemService;
 
     // 当下载任务完成后，间隔多长时间进行下一次任务
     @Scheduled(fixedDelay = 100*1000)
@@ -53,6 +57,8 @@ public class ItemTask {
                 long sku = Long.parseLong(skuEles.select("[data-sku]").attr("data-sku"));
 
                 // 根据sku查询商品数据
+                Item item = new Item();
+                item.setSku(sku);
                 // 如果商品存在，就进行下一个循环，该商品不保存，因为数据库中已存在
             }
         }
