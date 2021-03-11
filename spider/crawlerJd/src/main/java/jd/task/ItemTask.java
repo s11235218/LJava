@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+import java.util.List;
+
 @Component
 public class ItemTask {
 
@@ -21,7 +24,7 @@ public class ItemTask {
     private ItemService itemService;
 
     // 当下载任务完成后，间隔多长时间进行下一次任务
-    @Scheduled(fixedDelay = 100*1000)
+    @Scheduled(fixedDelay = 100*10000)
     public void itemTask() throws Exception {
 
         // 声明需要解析的初始地址
@@ -59,10 +62,35 @@ public class ItemTask {
                 // 根据sku查询商品数据
                 Item item = new Item();
                 item.setSku(sku);
-                // 如果商品存在，就进行下一个循环，该商品不保存，因为数据库中已存在
+                List<Item> list = this.itemService.findAll(item);
+
+                if (list.size() > 0) {
+                    // 如果商品存在，就进行下一个循环，该商品不保存，因为数据库中已存在
+                    continue;
+                }
+
+                // 设置商品的spu
+                item.setSpu(spu);
+
+                // 获取商品详情url
+                String itemUrl = "https://item.jd.com/" + sku + ".html";
+                item.setUrl(itemUrl);
+
+                // 获取商品图片
+                String picUrl = "https:" + skuEles.select("img[data-sku]").first().attr("data-lazy-img");
+                picUrl = picUrl.replace("/n9/", "/n1/");
+                String picName = this.httpUtils.doGetImage(picUrl);
+                item.setPic(picUrl);
+
+                // 获取商品价格
+                //item.setPrice();
+
+                // 获取商品标题
+               // item.setTitle();
+
+                item.setCreated(new Date());
+                item.setUpdated(item.getCreated());
             }
         }
-
-
     }
 }
