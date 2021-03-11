@@ -69,7 +69,7 @@ public class ItemTask {
                     continue;
                 }
 
-                // 设置商品的spu
+                // 设置商品的
                 item.setSpu(spu);
 
                 // 获取商品详情url
