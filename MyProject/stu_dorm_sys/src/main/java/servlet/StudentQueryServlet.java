@@ -15,4 +15,6 @@ public class StudentQueryServlet extends AbstractBaseServlet {
         List<Student> students = StudentDAO.query();
         return students;
     }
+
+    public void main(){}
 }
