@@ -16,5 +16,5 @@ public class StudentQueryServlet extends AbstractBaseServlet {
         return students;
     }
 
-    public void main() {}
+
 }
