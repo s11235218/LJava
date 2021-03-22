@@ -19,7 +19,7 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");// 设置请求数据的编码格式：
+        req.setCharacterEncoding("UTF-8");// 设置请求数据的编码格式
         resp.setCharacterEncoding("UTF-8");// 设置响应数据的编码格式
         resp.setContentType("application/json");// 设置响应数据格式
 
@@ -33,6 +33,7 @@ public abstract class AbstractBaseServlet extends HttpServlet {
         } catch (Exception e) {
             response.setCode("500");
             response.setMessage(e.getMessage());
+            // 打印异常堆栈，到输出流里
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             e.printStackTrace(pw);
@@ -42,6 +43,9 @@ public abstract class AbstractBaseServlet extends HttpServlet {
         }
         PrintWriter pw = resp.getWriter();
         pw.println(JSONUtil.write(response));
+        // 将缓冲区的数据强制输出，用于清空缓冲区，
+        // 若直接调用close()方法，则可能会丢失缓冲区的数据
+        // 所以通俗来讲它起到的是刷新的作用
         pw.flush();
     }
 

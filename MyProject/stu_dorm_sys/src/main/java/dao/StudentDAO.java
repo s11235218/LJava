@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class StudentDAO {
@@ -31,8 +32,9 @@ public class StudentDAO {
                     "   from student s" +
                     "         join dorm d on s.dorm_id = d.id" +
                     "         join building b on d.building_id = b.id";
-            ps = c.prepareStatement(sql);
-            rs = ps.executeQuery();
+            ps = c.prepareStatement(sql); // 数据库连接对象获取连接
+            rs = ps.executeQuery(); // 执行后获得结果集
+            // 处理结果集
             while (rs.next()) {
                 Student s = new Student();
                 s.setId(rs.getInt("id"));
@@ -41,6 +43,7 @@ public class StudentDAO {
                 s.setStudentMajor(rs.getString("student_major"));
                 s.setStudentEmail(rs.getString("student_email"));
                 s.setDormId(rs.getInt("dorm_id"));
+                s.setCreateTime(new Date(rs.getTimestamp("create_time").getTime()));
                 s.setDormNo(rs.getString("dorm_no"));
                 s.setBuildingId(rs.getInt("building_id"));
                 s.setBuildingName(rs.getString("building_name"));
@@ -54,6 +57,4 @@ public class StudentDAO {
         }
         return list;
     }
-
-
 }

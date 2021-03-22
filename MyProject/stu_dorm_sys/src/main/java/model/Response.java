@@ -8,7 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Response {
-
+    // 前端需要解析的字段 统一响应格式
     private boolean success;
     private String code;
     private String message;
