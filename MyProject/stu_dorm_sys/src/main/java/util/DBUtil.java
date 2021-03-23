@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class DBUtil {
 
     private static volatile DataSource DS; // 双重校验锁 数据库连接池创建
-    private static final String URL = "jdbc:mysql://localhost:3306/stu_dorm";
+    private static final String URL = "jdbc:mysql://localhost:3306/stu_dorm?useUnicode=true&characterEncoding=UTF-8";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 

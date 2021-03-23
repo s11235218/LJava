@@ -79,9 +79,9 @@ public class HttpUtils {
     // 设置请求信息
     private RequestConfig setConfig() {
         return RequestConfig.custom()
-                .setConnectTimeout(1000) // 创建连接的最长时间
-                .setConnectionRequestTimeout(500)  // 获取连接的最长时间
-                .setSocketTimeout(10000) // 数据传输的最长时间
+                .setConnectTimeout(10000) // 创建连接的最长时间
+                .setConnectionRequestTimeout(5000)  // 获取连接的最长时间
+                .setSocketTimeout(100000) // 数据传输的最长时间
                 .build();
     }
 

@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -22,4 +23,6 @@ public class Student {
     private Integer buildingId;
     private String buildingName;
     private String dormNo;
+
+    private List<Integer> ids;
 }
