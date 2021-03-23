@@ -1,5 +1,6 @@
 package dao;
 
+import model.Page;
 import model.Student;
 import util.DBUtil;
 
@@ -12,14 +13,14 @@ import java.util.List;
 
 public class StudentDAO {
 
-    public static List<Student> query() {
+    public static List<Student> query(Page p) {
         List<Student> list = new ArrayList<>();
         Connection c = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             c = DBUtil.getConnection();
-            String sql = "select s.id," +
+            StringBuilder sql = new StringBuilder("select s.id," +
                     "       s.student_name," +
                     "       s.student_graduate_year," +
                     "       s.student_major," +
@@ -31,8 +32,15 @@ public class StudentDAO {
                     "       b.building_name" +
                     "   from student s" +
                     "         join dorm d on s.dorm_id = d.id" +
-                    "         join building b on d.building_id = b.id";
-            ps = c.prepareStatement(sql); // 数据库连接对象获取连接
+                    "         join building b on d.building_id = b.id");
+            if (p.getSearchText() != null && p.getSearchText().trim().length() > 0) {
+                sql.append("    where s.student_name like ?");
+            }
+            if (p.getSortOrder() != null && p.getSortOrder().trim().length() > 0) {
+                // 占位符使用场景：考虑因素：字符串替换占位符，带单引号
+                sql.append("    order by s.create_time " + p.getSortOrder());
+            }
+            ps = c.prepareStatement(sql.toString()); // 数据库连接对象获取连接
             rs = ps.executeQuery(); // 执行后获得结果集
             // 处理结果集
             while (rs.next()) {

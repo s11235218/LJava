@@ -1,6 +1,7 @@
 package servlet;
 
 import dao.StudentDAO;
+import model.Page;
 import model.Student;
 
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,9 @@ import java.util.List;
 public class StudentQueryServlet extends AbstractBaseServlet {
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-        List<Student> students = StudentDAO.query();
+        // 解析searchText=&sortOrder=asc&pageSize=7&pageNumber=1
+        Page p = Page.parse(req);
+        List<Student> students = StudentDAO.query(p);
         return students;
     }
 }

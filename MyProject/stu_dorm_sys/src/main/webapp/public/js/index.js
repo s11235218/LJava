@@ -19,7 +19,7 @@ function resetConfirmPassword(){
     });
 }
 
-let dev = true;
+let dev = false;
 let devLoginData = {
     username: "abc",
     password: "123"
