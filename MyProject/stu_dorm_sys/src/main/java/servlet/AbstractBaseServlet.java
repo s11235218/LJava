@@ -2,6 +2,7 @@ package servlet;
 
 import model.Response;
 import util.JSONUtil;
+import util.ThreadLocalHolder;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +30,10 @@ public abstract class AbstractBaseServlet extends HttpServlet {
             response.setSuccess(true);
             response.setCode("200");
             response.setData("设置成功！");
+            // 第一个get是自己写的方法，表示获取一个ThreadLocal变量
+            // 再使用Thread Local的get方法获取到之前访问的变量
+            // 获取当前线程设置的count变量
+            response.setTotal(ThreadLocalHolder.get().get());
             response.setData(o);
         } catch (Exception e) {
             response.setCode("500");
@@ -40,6 +45,9 @@ public abstract class AbstractBaseServlet extends HttpServlet {
             String stackTrace = sw.toString();
             System.err.println(stackTrace);
             response.setStackTrace(stackTrace);
+        } finally {
+            // 使用完ThreadLocal在线程结束前调用remove()方法删除变量值, 否则容易导致内存泄漏
+            ThreadLocalHolder.get().remove();
         }
         PrintWriter pw = resp.getWriter();
         pw.println(JSONUtil.write(response));

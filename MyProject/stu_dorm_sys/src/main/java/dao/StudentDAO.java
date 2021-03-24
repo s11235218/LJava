@@ -3,6 +3,7 @@ package dao;
 import model.Page;
 import model.Student;
 import util.DBUtil;
+import util.ThreadLocalHolder;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -52,8 +53,8 @@ public class StudentDAO {
             // 处理结果集
             while (rs.next()) {
                 int count = rs.getInt("count");// 设置到返回数据的total字段，当前方法是无法通过返回对象设置
-                // 使用ThreadLocal：变量绑定到线程
-
+                // 使用ThreadLocal：变量绑定到线程Thread类的
+                ThreadLocalHolder.get().set(count);
             }
 
 
