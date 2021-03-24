@@ -40,7 +40,34 @@ public class StudentDAO {
                 // 占位符使用场景：考虑因素：字符串替换占位符，带单引号
                 sql.append("    order by s.create_time " + p.getSortOrder());
             }
+            // 获取总的查询数量
+            StringBuilder countSQL = new StringBuilder("select count(0) count from (");
+            countSQL.append(sql);
+            countSQL.append(") tmp");
+            ps = c.prepareStatement(countSQL.toString());
+            if (p.getSearchText() != null && p.getSearchText().trim().length() > 0) {
+                ps.setString(1, "%" + p.getSearchText() + "%");
+            }
+            rs = ps.executeQuery(); // 执行后获得结果集
+            // 处理结果集
+            while (rs.next()) {
+                int count = rs.getInt("count");// 设置到返回数据的total字段，当前方法是无法通过返回对象设置
+                // 使用ThreadLocal：变量绑定到线程
+
+            }
+
+
+            // 处理业务数据
+            sql.append("    limit ?,?");
             ps = c.prepareStatement(sql.toString()); // 数据库连接对象获取连接
+            // 页码转换为索引:上一页的页码*每页的数量，注意索引从0开始
+            int idx = (p.getPageNumber() - 1) * p.getPageSize();
+            int i = 1;
+            if (p.getSearchText() != null && p.getSearchText().trim().length() > 0) {
+                ps.setString(i++, "%" + p.getSearchText() + "%");
+            }
+            ps.setInt(i++, idx);
+            ps.setInt(i++, p.getPageSize());
             rs = ps.executeQuery(); // 执行后获得结果集
             // 处理结果集
             while (rs.next()) {

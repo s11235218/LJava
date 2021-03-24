@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 @Getter
 @ToString
 public class Page {
-    private String searchText; // 搜索的内容
-    private String sortOrder; // 排序的方式：升序、降序
-    private Integer pageSize; // 每页的数量
+    private String searchText; // 搜索内容
+    private String sortOrder; // 排序方式：升序、降序
+    private Integer pageSize; // 每页数量
     private Integer pageNumber; // 当前页码
 
     /**
