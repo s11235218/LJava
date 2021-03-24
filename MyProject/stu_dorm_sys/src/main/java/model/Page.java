@@ -34,6 +34,5 @@ public class Page {
         p.pageSize = Integer.parseInt(req.getParameter("pageSize"));
         p.pageNumber = Integer.parseInt(req.getParameter("pageNumber"));
         return p;
-
     }
 }
