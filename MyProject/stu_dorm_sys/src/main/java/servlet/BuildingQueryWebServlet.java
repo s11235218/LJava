@@ -1,18 +1,20 @@
 package servlet;
 
-import dao.StudentDAO;
-import model.Student;
+import dao.BuildingDAO;
+import model.Building;
+import model.Page;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
-@WebServlet("/student/queryById")
-public class StudentQueryByIdServlet extends AbstractBaseServlet {
+@WebServlet("/building/query")
+public class BuildingQueryWebServlet extends AbstractBaseServlet {
+
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-        String id = req.getParameter("id");
-        Student s = StudentDAO.queryById(Integer.parseInt(id));
-        return s;
+        List<Building> buildings = BuildingDAO.queryWeb();
+        return buildings;
     }
 }

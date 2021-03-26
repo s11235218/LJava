@@ -1,8 +1,9 @@
-package servlet;
+package servlet.studentServlet;
 
 import dao.StudentDAO;
 import model.Page;
 import model.Student;
+import servlet.AbstractBaseServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;

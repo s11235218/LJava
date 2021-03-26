@@ -1,7 +1,8 @@
-package servlet;
+package servlet.studentServlet;
 
 import dao.StudentDAO;
 import model.Student;
+import servlet.AbstractBaseServlet;
 import util.JSONUtil;
 
 import javax.servlet.annotation.WebServlet;

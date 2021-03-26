@@ -17,4 +17,6 @@ public class Dorm {
     private Integer buildingId;
     private Date createTime;
 
+    private String buildingName;
+
 }
