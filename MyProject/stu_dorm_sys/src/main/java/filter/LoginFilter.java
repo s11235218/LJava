@@ -1,6 +1,5 @@
 package filter;
 
-import com.sun.deploy.net.HttpResponse;
 import model.Response;
 import util.JSONUtil;
 
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.ResultSet;
 
 // 过滤器：http请求的url匹配过滤器路径规则，才会过滤（调用filter中的方法）
 @WebFilter("/*")
