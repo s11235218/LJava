@@ -1,7 +1,8 @@
-package servlet;
+package servlet.buildingServlet;
 
 import dao.BuildingDAO;
 import model.DictionaryTag;
+import servlet.AbstractBaseServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;

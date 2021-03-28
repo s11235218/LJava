@@ -1,8 +1,9 @@
-package servlet;
+package servlet.buildingServlet;
 
 import dao.BuildingDAO;
 import model.Building;
 import model.Page;
+import servlet.AbstractBaseServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
