@@ -1,22 +1,22 @@
-package servlet;
+package servlet.dormServlet;
 
 import dao.BuildingDAO;
 import dao.DormDAO;
 import model.Building;
 import model.Dorm;
+import servlet.AbstractBaseServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
-@WebServlet("/dorm/queryById")
-public class DormQueryByIdServlet extends AbstractBaseServlet {
+@WebServlet("/dorm/query")
+public class DormQueryWebServlet extends AbstractBaseServlet {
 
     @Override
     public Object process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-        String id = req.getParameter("id");
-        Dorm d = DormDAO.queryById(Integer.parseInt(id));
-        return d;
-
+        List<Dorm> dorms = DormDAO.queryWeb();
+        return dorms;
     }
 }

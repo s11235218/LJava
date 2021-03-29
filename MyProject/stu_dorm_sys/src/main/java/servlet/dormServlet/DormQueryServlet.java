@@ -1,8 +1,9 @@
-package servlet;
+package servlet.dormServlet;
 
 import dao.BuildingDAO;
 import dao.DormDAO;
 import model.DictionaryTag;
+import servlet.AbstractBaseServlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
