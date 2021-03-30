@@ -60,7 +60,7 @@ public class DormDAO {
                     "   from dorm d" +
                     "         join building b on d.building_id = b.id");
             ps  = c.prepareStatement(sql);
-            rs = ps.executeQuery(); // 执行后获得结果集
+            rs = ps.executeQuery();
             // 处理结果集
             while (rs.next()) {
                 Dorm d = new Dorm();
