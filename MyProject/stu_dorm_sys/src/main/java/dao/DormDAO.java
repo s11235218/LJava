@@ -26,7 +26,7 @@ public class DormDAO {
                     "   from building b" +
                     "         join dorm d on b.id = d.building_id" +
                     " where b.id = ?";
-            ps = c.prepareStatement(sql); // 数据库连接对象获取连接
+            ps = c.prepareStatement(sql);
             ps.setInt(1, id);
             rs = ps.executeQuery(); // 执行后获得结果集
             // 处理结果集
