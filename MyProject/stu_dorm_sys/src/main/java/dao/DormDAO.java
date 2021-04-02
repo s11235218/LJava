@@ -96,7 +96,7 @@ public class DormDAO {
                     "   where d.id=?";
             ps = c.prepareStatement(sql); // 数据库连接对象获取连接
             ps.setInt(1, id);
-            rs = ps.executeQuery(); // 执行后获得结果集
+            rs = ps.executeQuery();
             // 处理结果集
             while (rs.next()) {
                 d.setId(rs.getInt("id"));
