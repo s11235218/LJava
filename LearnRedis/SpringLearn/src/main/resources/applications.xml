@@ -9,8 +9,80 @@
             默认是单例模式
     -->
     <!-- 通过无参的构造方法，创建一个class类型的对象 如果该类型没有无参的构造方法，就会报错-->
-    <bean id="serein" class="java.lang.String"></bean>
+    <bean id="serein" class="java.lang.String">
+        <constructor-arg value="小石"/>
+    </bean>
 <!--    生成一个id为string的字符串对象-->
     <bean class="java.lang.String"></bean>
+
+    <bean id="s1" class="java.lang.String">
+        <constructor-arg value="Bob" />
+    </bean>
+
+    <bean id="duck1" class="Animal.Duck">
+        <property name="age" value="12"/>
+        <property name="name" ref="s1"/>
+    </bean>
+
+    <bean id="duck2" class="Animal.Duck2">
+        <constructor-arg name="n" value="Job"/>
+        <constructor-arg name="a" value="2"/>
+    </bean>
+
+
+
+    <bean id="duckList" class="Animal.Duck3">
+        <property name="age" value="12"/>
+        <property name="name" value="北京烤鸭"/>
+        <property name="next" ref="h"/>
+    </bean>
+
+    <bean id="h" class="Animal.Duck3">
+    <property name="age" value="3"/>
+    <property name="name" value="甜皮鸭"/>
+    <property name="next" ref="l2"/>
+    </bean>
+
+    <bean id="l2" class="Animal.Duck3">
+        <property name="age" value="2"/>
+        <property name="name" value="酱鸭"/>
+        <property name="next" ref="l3"/>
+    </bean>
+
+    <bean id="l3" class="Animal.Duck3">
+        <property name="age" value="2"/>
+        <property name="name" value="Bob"/>
+    </bean>
+
+    <bean id="h0" class="Animal.Duck">
+        <property name="age" value="12"/>
+        <property name="name" value="北京烤鸭"/>
+    </bean>
+
+    <bean id="h1" class="Animal.Duck">
+        <property name="age" value="3"/>
+        <property name="name" value="甜皮鸭"/>
+    </bean>
+
+    <bean id="h2" class="Animal.Duck">
+        <property name="age" value="2"/>
+        <property name="name" value="酱鸭"/>
+    </bean>
+
+    <bean id="h3" class="Animal.Duck">
+        <property name="age" value="2"/>
+        <property name="name" value="Bob"/>
+    </bean>
+
+    <bean id="store" class="Animal.DuckStore">
+        <property name="ducks">
+            <list>
+                <ref bean="h0"></ref>
+                <ref bean="h1"></ref>
+                <ref bean="h2"></ref>
+                <ref bean="h3"></ref>
+            </list>
+        </property>
+    </bean>
 
 </beans>

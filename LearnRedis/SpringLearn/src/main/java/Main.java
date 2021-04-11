@@ -1,3 +1,7 @@
+import Animal.Duck;
+import Animal.Duck2;
+import Animal.Duck3;
+import Animal.DuckStore;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +18,18 @@ public class Main {
         System.out.println(serein);
 
         // 该类型有多个对象，报错
-        context.getBean(String.class);
+        // context.getBean(String.class);
+
+        Duck duck1 = (Duck) context.getBean("duck1");
+        System.out.println(duck1);
+
+        Duck2 duck2 = (Duck2) context.getBean("duck2");
+        System.out.println(duck2);
+
+        Duck3 duck3 = (Duck3) context.getBean("duckList");
+        System.out.println(duck3);
+
+        DuckStore duckStore = (DuckStore) context.getBean("store");
+        System.out.println(duckStore);
     }
 }

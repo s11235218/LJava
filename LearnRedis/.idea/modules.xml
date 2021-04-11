@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RedisTest/RedisTest.iml" filepath="$PROJECT_DIR$/RedisTest/RedisTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringLearn/SpringLearn.iml" filepath="$PROJECT_DIR$/SpringLearn/SpringLearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-demo/springboot-demo.iml" filepath="$PROJECT_DIR$/springboot-demo/springboot-demo.iml" />
     </modules>
   </component>
 </project>
