@@ -123,8 +123,6 @@
     </foreach>
   </delete>
 
-
-
   <delete id="deleteByCondition" parameterType="serein.model.Record">
     delete from record
     <trim prefix="where" suffixOverrides="and">
