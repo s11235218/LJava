@@ -14,6 +14,16 @@ import java.util.List;
 
 public class StudentDAO {
 
+    public static List<Student> query1(Page p) {
+        List<Student> list = new ArrayList<>();
+        Connection c = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        c = DBUtil.getConnection();
+        StringBuilder sql = new StringBuilder();
+
+    }
+
     public static List<Student> query(Page p) {
         List<Student> list = new ArrayList<>();
         Connection c = null;

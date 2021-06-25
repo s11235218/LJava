@@ -2,7 +2,6 @@ package dao;
 
 import model.Building;
 import model.DictionaryTag;
-import model.Student;
 import util.DBUtil;
 
 import java.sql.Connection;
