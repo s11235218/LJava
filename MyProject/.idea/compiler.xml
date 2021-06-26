@@ -7,11 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="stu_dorm_sys" />
+        <module name="MyTest" />
+        <module name="MyContact" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MyContact" target="1.8" />
+      <module name="MyTest" target="1.5" />
       <module name="stu_dorm_sys" target="1.8" />
+      <module name="test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
