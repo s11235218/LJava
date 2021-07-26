@@ -12,7 +12,7 @@ import java.util.Date;
 public class Building {
 
     private Integer id;  // 宿舍楼id
-    private String buildingName;
+    private String buildingName;  // 宿舍楼名
     private String buildingDesc;
     private Date createTime;
 }
