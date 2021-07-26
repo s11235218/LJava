@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 public class Building {
 
-    private Integer id;
+    private Integer id;  // 宿舍楼id
     private String buildingName;
     private String buildingDesc;
     private Date createTime;
