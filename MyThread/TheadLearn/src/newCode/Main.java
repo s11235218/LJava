@@ -14,7 +14,7 @@ public class Main {
             }
             Arrays.sort(desk); // 桌子容纳量从小到大排序
             PriorityQueue<Customer> queue = new PriorityQueue<>(); // 将客人按消费额降序加入优先级队列
-            for (int i = 0; i < m; i ++) {
+            for (int i = 0; i < m; i++) {
                 int b = sc.nextInt();
                 int c = sc.nextInt();
                 if(b <= desk[n - 1]) queue.add(new Customer(b, c)); // 如果人数小于桌子最大容纳量,加入队列
